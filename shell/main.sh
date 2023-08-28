@@ -21,7 +21,7 @@ if [[ "$OSTYPE" == 'linux-gnu-ubuntu' ]]; then
 fi
 
 # BAT CONFIG
-export BAT_CONFIG_PATH="$HOME/.dotfiles/bat.conf"
+export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 export EDITOR=nvim
 
@@ -62,7 +62,7 @@ else
 fi
 
 # FZF OPTIONS
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --no-ignore --ignore-file ~/.dotfiles/fd.ignore'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --no-ignore --ignore-file ~/.dotfiles/fd/fd.ignore'
 export FZF_DEFAULT_OPTS='--layout=reverse'
 
 # count git commits

@@ -9,7 +9,7 @@ source ~/.dotfiles/install/symlinks.sh
 ln -s ~/.dotfiles/scoop $HOME/.config/scoop
 
 # mintty
-ln -s ~/.dotfiles/.minttyrc $HOME/.minttyrc
+ln -s ~/.dotfiles/mintty/.minttyrc $HOME/.minttyrc
 
 echo "Symlinks installed!"
 
