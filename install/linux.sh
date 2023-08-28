@@ -7,7 +7,7 @@ echo "Symlinks installed!"
 echo "Installing apps..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd fzf gh jq lsd neovim nvm pnpm ripgrep yarn
+sudo apt install build-essential bat fd fzf gh jq lsd neovim nvm pnpm ripgrep shellcheck yarn
 
 echo "Installing wezterm..."
 curl -LO https://github.com/wez/wezterm/releases/download/20230712-072601-f4abf8fd/WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage

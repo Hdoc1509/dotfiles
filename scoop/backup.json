@@ -4,29 +4,29 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1691958182000)\/",
+                "value": "\/Date(1693254329000)\/",
                 "DisplayHint": 2,
-                "DateTime": "domingo, 13 de agosto de 2023 15:23:02"
+                "DateTime": "lunes, 28 de agosto de 2023 15:25:29"
             },
-            "Manifests": 1888
+            "Manifests": 1891
         },
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1691958156000)\/",
+                "value": "\/Date(1693254262000)\/",
                 "DisplayHint": 2,
-                "DateTime": "domingo, 13 de agosto de 2023 15:22:36"
+                "DateTime": "lunes, 28 de agosto de 2023 15:24:22"
             },
-            "Manifests": 1217
+            "Manifests": 1221
         },
         {
             "Name": "Syndim_scoop-bucket",
             "Source": "https://github.com/Syndim/scoop-bucket",
             "Updated": {
-                "value": "\/Date(1691457187000)\/",
+                "value": "\/Date(1692925444000)\/",
                 "DisplayHint": 2,
-                "DateTime": "lunes, 7 de agosto de 2023 20:13:07"
+                "DateTime": "jueves, 24 de agosto de 2023 20:04:04"
             },
             "Manifests": 9
         }
@@ -106,8 +106,8 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.32.1",
-            "Updated": "\/Date(1690928236919)\/"
+            "Version": "2.33.0",
+            "Updated": "\/Date(1692889017175)\/"
         },
         {
             "Info": "",
@@ -164,6 +164,13 @@
             "Name": "ripgrep",
             "Version": "13.0.0",
             "Updated": "\/Date(1669741271217)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "shellcheck",
+            "Version": "0.9.0",
+            "Updated": "\/Date(1693263485135)\/"
         },
         {
             "Info": "",
