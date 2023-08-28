@@ -1,0 +1,204 @@
+{
+    "buckets": [
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": {
+                "value": "\/Date(1691958182000)\/",
+                "DisplayHint": 2,
+                "DateTime": "domingo, 13 de agosto de 2023 15:23:02"
+            },
+            "Manifests": 1888
+        },
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": {
+                "value": "\/Date(1691958156000)\/",
+                "DisplayHint": 2,
+                "DateTime": "domingo, 13 de agosto de 2023 15:22:36"
+            },
+            "Manifests": 1217
+        },
+        {
+            "Name": "Syndim_scoop-bucket",
+            "Source": "https://github.com/Syndim/scoop-bucket",
+            "Updated": {
+                "value": "\/Date(1691457187000)\/",
+                "DisplayHint": 2,
+                "DateTime": "lunes, 7 de agosto de 2023 20:13:07"
+            },
+            "Manifests": 9
+        }
+    ],
+    "apps": [
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "7zip",
+            "Version": "23.01",
+            "Updated": "\/Date(1688333567617)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "autoclicker",
+            "Version": "1.0.0.2",
+            "Updated": "\/Date(1671405053480)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "bat",
+            "Version": "0.23.0",
+            "Updated": "\/Date(1679764410399)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "carnac",
+            "Version": "2.3.13",
+            "Updated": "\/Date(1689346661248)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "dopamine",
+            "Version": "2.0.9",
+            "Updated": "\/Date(1684708669182)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "etcher",
+            "Version": "1.18.11",
+            "Updated": "\/Date(1689547527323)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "fd",
+            "Version": "8.7.0",
+            "Updated": "\/Date(1677462414503)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "flux",
+            "Version": "4.124",
+            "Updated": "\/Date(1686519397693)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "fzf",
+            "Version": "0.42.0",
+            "Updated": "\/Date(1687124051122)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "gcc",
+            "Version": "11.2.0",
+            "Updated": "\/Date(1685833910493)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "gh",
+            "Version": "2.32.1",
+            "Updated": "\/Date(1690928236919)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "jq",
+            "Version": "1.6",
+            "Updated": "\/Date(1690147964839)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "lsd",
+            "Version": "0.23.1",
+            "Updated": "\/Date(1682476810338)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "neovim",
+            "Version": "0.9.1",
+            "Updated": "\/Date(1685929595399)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "nvm",
+            "Version": "1.1.11",
+            "Updated": "\/Date(1681421682830)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "peazip",
+            "Version": "9.3.0",
+            "Updated": "\/Date(1687728982634)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "pnpm",
+            "Version": "8.6.12",
+            "Updated": "\/Date(1691341230106)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "quicklook",
+            "Version": "3.7.3",
+            "Updated": "\/Date(1670883202356)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "ripgrep",
+            "Version": "13.0.0",
+            "Updated": "\/Date(1669741271217)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "sqlite",
+            "Version": "3.42.0",
+            "Updated": "\/Date(1684689134761)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "taskbarx",
+            "Version": "1.7.8.0",
+            "Updated": "\/Date(1670881987449)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "tinytask",
+            "Version": "1.77",
+            "Updated": "\/Date(1687969597494)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "wezterm",
+            "Version": "20230712-072601-f4abf8fd",
+            "Updated": "\/Date(1689354304651)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "yarn",
+            "Version": "1.22.19",
+            "Updated": "\/Date(1690136274230)\/"
+        }
+    ]
+}

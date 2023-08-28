@@ -1,0 +1,3 @@
+# {"product":"home","version":"16.2.11","path":"Settings.ExclusionsManagement.PerformanceExclusions","columns":["Path","Description"]}
+C:\Users\HP\scoop\*,"Exclude Scoop files"
+C:\Users\HP\AppData\Local\nvim-data\*,"Exclude nvim-data"

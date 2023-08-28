@@ -1,0 +1,26 @@
+blocks:
+  - permission
+  - user
+  - size
+  - date
+  - name
+
+color:
+  when: always
+
+date: relative
+
+# indicators: true
+
+layout: oneline
+
+icons:
+  when: always
+
+ignore-globs:
+  - .git
+
+sorting:
+  dir-grouping: first
+
+total-size: true

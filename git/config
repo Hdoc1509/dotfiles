@@ -1,0 +1,8 @@
+[user]
+	name = hdoc
+	email = hector.ochoa.dev@gmail.com
+[core]
+	autocrlf = input
+	editor = nvim -u ~/.config/nvim/minimal.lua
+	symlinks = true
+	pager = less -+X --tabs=2
