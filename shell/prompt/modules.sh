@@ -1,5 +1,3 @@
-# shellcheck disable=SC2034
-
 if [[ $PROMPT_THEME == 'powerblack' ]]; then
   DIRECTORY_COLOR=$(set_prompt_color 39 0)
   CLOSE_PROMPT_COLOR=$(set_prompt_color 0 -)
