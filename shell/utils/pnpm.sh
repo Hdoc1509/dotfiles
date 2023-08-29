@@ -1,5 +1,5 @@
 PNPM_GLOBAL_BACKUP=~/.dotfiles/install/global-packages.txt
-PNPM_GLOBAL_PACKAGE_JSON="$(dirname $(pnpm root --global))/package.json"
+PNPM_GLOBAL_PACKAGE_JSON="$(dirname "$(pnpm root --global)")/package.json"
 
 # backup pnpm global packages
 pnpm_backup_global() {
