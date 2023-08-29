@@ -4,9 +4,9 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1693254329000)\/",
+                "value": "\/Date(1693269229000)\/",
                 "DisplayHint": 2,
-                "DateTime": "lunes, 28 de agosto de 2023 15:25:29"
+                "DateTime": "Monday, August 28, 2023 7:33:49 PM"
             },
             "Manifests": 1891
         },
@@ -14,9 +14,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1693254262000)\/",
+                "value": "\/Date(1693269218000)\/",
                 "DisplayHint": 2,
-                "DateTime": "lunes, 28 de agosto de 2023 15:24:22"
+                "DateTime": "Monday, August 28, 2023 7:33:38 PM"
             },
             "Manifests": 1221
         },
@@ -24,9 +24,9 @@
             "Name": "Syndim_scoop-bucket",
             "Source": "https://github.com/Syndim/scoop-bucket",
             "Updated": {
-                "value": "\/Date(1692925444000)\/",
+                "value": "\/Date(1693271068000)\/",
                 "DisplayHint": 2,
-                "DateTime": "jueves, 24 de agosto de 2023 20:04:04"
+                "DateTime": "Monday, August 28, 2023 8:04:28 PM"
             },
             "Manifests": 9
         }
@@ -79,7 +79,7 @@
             "Source": "main",
             "Name": "fd",
             "Version": "8.7.0",
-            "Updated": "\/Date(1677462414503)\/"
+            "Updated": "\/Date(1693275395364)\/"
         },
         {
             "Info": "",
