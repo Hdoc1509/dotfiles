@@ -4,8 +4,7 @@ PNPM_GLOBAL_PACKAGE_JSON="$(dirname $(pnpm root --global))/package.json"
 # backup pnpm global packages
 pnpm_backup_global() {
   #TODO: Test in linux
-  /usr/bin/cat $PNPM_GLOBAL_PACKAGE_JSON |
-    jq -r '.dependencies | keys_unsorted[]' >"$PNPM_GLOBAL_BACKUP" &&
+  jq -r '.dependencies | keys_unsorted[]' "$PNPM_GLOBAL_PACKAGE_JSON" >"$PNPM_GLOBAL_BACKUP" &&
     echo "${LIGHTGREEN}PNPM global backup done successfullly${NOCOLOR}" &&
     echo "${LIGHTGREEN}The following packages were backuped:${NOCOLOR}" &&
     /usr/bin/cat "$PNPM_GLOBAL_BACKUP"
