@@ -1,3 +1,4 @@
+__git_fzf() { fzf --height=20% --multi --header="$1"; }
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
 
@@ -24,8 +25,7 @@ gbdi() {
     echo "No branches to delete"
   else
     echo "${branches}" |
-      fzf --height=20% --multi \
-        --header=$'Delete git branch(es) \n<Tab>: toggle selection' |
+      __git_fzf "Delete branch(s) | Press <Tab> for toggle selection" |
       xargs -I {} git branch --delete '{}'
   fi
 }
