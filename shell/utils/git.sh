@@ -29,3 +29,17 @@ gbdi() {
       xargs -I {} git branch --delete '{}'
   fi
 }
+
+# Delete tags interactively
+gtdi() {
+  local tags
+  tags=$(git tag)
+
+  if [[ -z $tags ]]; then
+    echo "No tags to delete"
+  else
+    echo "${tags}" |
+      __git_fzf "Delete tag(s) | Press <Tab> for toggle selection" |
+      xargs -I {} git tag --delete '{}'
+  fi
+}
