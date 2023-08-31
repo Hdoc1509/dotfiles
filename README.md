@@ -28,9 +28,16 @@ mv ~/.config/gh ~/.config/gh.bak
 mv ~/.config/git ~/.config/git.bak
 
 # install scripts
-./install/windows.sh  # for windows
-./install/linux.sh     # for ubuntu-based linux distros
+./install/windows.sh   # for Windows
+./install/linux.sh     # for Ubuntu-based Linux distros
 
 # restore gh auth file
 mv ~/.config/gh.bak/hosts.yml ~/.config/gh
 ```
+
+## Windows
+
+There are some shortcuts and scripts for Windows inside `windows` folder.
+
+- Shortcuts must be copied into `C:\Windows\` folder.
+- Scripts must be run as administrator by clicking `Run as administrator`.
