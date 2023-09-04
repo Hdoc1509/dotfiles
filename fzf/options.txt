@@ -1,0 +1,4 @@
+--layout=reverse
+--preview="bat --style=numbers {}"
+--preview-window="wrap,hidden"
+--bind="ctrl-p:change-preview-window(hidden|50%),ctrl-e:preview-down,ctrl-y:preview-up,ctrl-b:preview-page-up,ctrl-f:preview-page-down"

@@ -61,8 +61,11 @@ else
 fi
 
 # FZF OPTIONS
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --no-ignore --ignore-file ~/.dotfiles/fd/fd.ignore'
-export FZF_DEFAULT_OPTS='--layout=reverse'
+FZF_DEFAULT_COMMAND=$(tr '\n' ' ' <~/.dotfiles/fzf/command.txt)
+export FZF_DEFAULT_COMMAND
+
+FZF_DEFAULT_OPTS=$(tr '\n' ' ' <~/.dotfiles/fzf/options.txt)
+export FZF_DEFAULT_OPTS
 
 # count git commits
 # git rev-list --count master|HEAD
