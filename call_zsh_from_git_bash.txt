@@ -1,8 +1,8 @@
-Create a Acceso Directo with the following value:
+Create Shortcut with the following value:
 "C:\Program Files\Git\usr\bin\mintty.exe" /usr/bin/zsh -l -i
 
 Start in: %USERPROFILE%
 
 And save it as "zsh"
 
-Copy the Acceso Directo to folder "C:\Windows"
+Copy the shortcut to folder "C:\Windows"
