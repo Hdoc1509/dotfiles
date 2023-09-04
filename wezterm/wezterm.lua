@@ -21,6 +21,7 @@ return {
 
 	-- GUI
   hide_tab_bar_if_only_one_tab = true,
+  show_new_tab_button_in_tab_bar = false,
 	window_close_confirmation = 'NeverPrompt',
 	window_padding = {
 		left = 0,
