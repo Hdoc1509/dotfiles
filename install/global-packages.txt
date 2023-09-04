@@ -1,2 +1,4 @@
 netlify-cli
+netrisse
 npkill
+terminal-tetris
