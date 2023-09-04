@@ -7,6 +7,7 @@ source "$SHELL_UTILS"/tools.sh
 source "$SHELL_UTILS"/git.sh
 source "$SHELL_UTILS"/nvim.sh
 source "$SHELL_UTILS"/pnpm.sh
+source ~/.dotfiles/shell/games.sh
 
 source ~/.dotfiles/lsd/aliases.sh
 
