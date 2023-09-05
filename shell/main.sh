@@ -14,8 +14,7 @@ source ~/.dotfiles/lsd/aliases.sh
 alias cat='bat'
 alias dev='cd ~/Dev'
 
-# TODO: Get $OSTYPE variable on LinuxLite for this checking
-if [[ "$OSTYPE" == 'linux-gnu-ubuntu' ]]; then
+if [[ "$OSTYPE" == 'linux-gnu' ]]; then
   alias cat='batcat'
 fi
 
