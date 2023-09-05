@@ -13,8 +13,9 @@ return {
   default_cursor_style = 'BlinkingBlock',
 
   -- FONT
-  font = wt.font({
-    family = 'FiraCode NF',
+  font = wt.font_with_fallback({
+    { family = 'Fira Code Nerd Font' },
+    { family = 'FiraCode NF' },
     harfbuzz_features = { 'liga=1' },
   }),
   font_size = 12.5,
