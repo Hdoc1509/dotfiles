@@ -12,15 +12,19 @@ sudo apt install build-essential bat fd-find fzf gh jq neovim nvm ripgrep shellc
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
 
-echo "Installing lsd with apt\n"
+echo "Installing lsd with apt"
+echo
 sudo apt install lsd ||
-  echo "\nTrying to install lsd with wget\n"
-  wget \
-    https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-musl_1.0.0_amd64.deb \
-    -O /tmp/lsd-install.deb &&
-    sudo dpkg -i /tmp/lsd-install.deb
+  echo
+echo "Trying to install lsd with wget"
+echo
+wget \
+  https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-musl_1.0.0_amd64.deb \
+  -O /tmp/lsd-install.deb &&
+  sudo dpkg -i /tmp/lsd-install.deb
 
-echo "Installing nvm...\n"
+echo "Installing nvm..."
+echo
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 echo "Installing wezterm..."
