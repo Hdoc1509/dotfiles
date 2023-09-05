@@ -1,4 +1,7 @@
-local act = require("wezterm").action
+local wt = require("wezterm")
+
+local act = wt.action
+local act_cb = wt.action_callback
 
 return {
   -- Split horizontally
@@ -29,4 +32,18 @@ return {
 
   -- Toggle fullscreen
   { key = "F11", action = act.ToggleFullScreen },
+
+  -- Change tab title
+  {
+    key = "e",
+    mods = "CTRL|SHIFT",
+    action = act.PromptInputLine({
+      description = "Enter new name for tab",
+      action = act_cb(function(window, _, line)
+        if line then
+          window:active_tab():set_title(line)
+        end
+      end),
+    }),
+  },
 }
