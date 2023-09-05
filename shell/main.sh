@@ -35,7 +35,6 @@ export SF_PLUGINS=(
   neovim
   npm
   pnpm
-  scoop
   vitejs
 )
 
@@ -43,7 +42,7 @@ if is_msys_env; then
   # Enable Symlink on git-bash and msys environment
   export MSYS=winsymlinks:nativestrict
 
-  SF_PLUGINS+=(nvm_win)
+  SF_PLUGINS+=(nvm_win scoop)
 else
   SF_PLUGINS+=(nvm)
 fi
