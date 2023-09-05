@@ -1,6 +1,6 @@
 is_zsh() { [[ -n $ZSH_VERSION ]]; }
 is_msys_env() { [[ "$OSTYPE" == 'msys' ]]; }
-term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME}\007"; }
+term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
 mkcd() { mkdir -p "$1" && cd "$1" || return; }
 is_mintty_term() { [[ "$TERM_PROGRAM" == 'mintty' ]]; }
 
