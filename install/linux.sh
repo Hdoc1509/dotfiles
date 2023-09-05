@@ -17,6 +17,9 @@ sudo apt install lsd ||
     -O /tmp/lsd-install.deb &&
     sudo dpkg -i /tmp/lsd-install.deb
 
+echo "Installing nvm...\n"
+curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
 echo "Installing wezterm..."
 curl -LO https://github.com/wez/wezterm/releases/download/20230712-072601-f4abf8fd/WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
 chmod +x WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
