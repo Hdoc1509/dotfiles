@@ -25,7 +25,7 @@ curl -LO https://github.com/wez/wezterm/releases/download/20230712-072601-f4abf8
 chmod +x WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
 
 mkdir ~/bin
-mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/bin/wezterm
+mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
 
 echo "Installing node.js LTS..."
 nvm install --lts
