@@ -9,6 +9,9 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install build-essential bat fd-find fzf gh jq neovim nvm ripgrep shellcheck
 
+# Symlink fd-find to fd
+ln -s "$(which fdfind)" ~/.local/bin/fd
+
 echo "Installing lsd with apt\n"
 sudo apt install lsd ||
   echo "\nTrying to install lsd with wget\n"
