@@ -7,7 +7,7 @@ echo "Symlinks installed!"
 echo "Installing apps..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf gh jq neovim nvm pnpm ripgrep shellcheck yarn
+sudo apt install build-essential bat fd-find fzf gh jq neovim nvm ripgrep shellcheck
 
 echo "Installing lsd with apt\n"
 sudo apt install lsd ||
@@ -29,6 +29,9 @@ mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
 
 echo "Installing node.js LTS..."
 nvm install --lts
+
+echo "Enabling pnpm and yarn with corepack..."
+corepack enable
 
 echo "Restoring pnpm global packages..."
 pnpm_restore_global
