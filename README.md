@@ -5,7 +5,7 @@ tools I commonly use.
 
 ## Requirements
 
-- [`shell-fns`](https://github.com/Hdoc1598/shell-fns#installation)
+- [`shell-fns`](https://github.com/Hdoc1509/shell-fns#installation)
 - [`gitstatus`](https://github.com/romkatv/gitstatus)
 
 For Windows you will need [`scoop`](https://github.com/ScoopInstaller/Install#installation)
