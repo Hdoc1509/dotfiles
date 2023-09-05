@@ -7,7 +7,7 @@ echo "Symlinks installed!"
 echo "Installing apps..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf gh jq neovim nvm ripgrep shellcheck
+sudo apt install build-essential bat fd-find fzf gh jq nvm ripgrep shellcheck
 
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
@@ -33,6 +33,11 @@ chmod +x WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
 
 mkdir ~/bin
 mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
+
+echo "Installing neovim..."
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv nvim.appimage ~/.local/bin
 
 echo "Installing node.js LTS..."
 nvm install --lts
