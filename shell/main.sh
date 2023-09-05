@@ -16,6 +16,7 @@ alias dev='cd ~/Dev'
 
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
   alias cat='batcat'
+  alias fd='fdfind'
 fi
 
 # BAT CONFIG
