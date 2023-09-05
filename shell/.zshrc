@@ -21,11 +21,11 @@ bindkey '\e[3;5~' kill-word # Crtl-Delete
 # Ctrl+k         - Delete all right of the cursor
 # Ctrl+u         - Delete all left of the cursor
 
-source ~/.dotfiles/shell/main.sh
-
 alias s='source ~/.zshrc'
 alias xsh='exec zsh'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.dotfiles/shell/main.sh
