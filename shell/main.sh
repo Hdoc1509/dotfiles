@@ -31,13 +31,11 @@ if is_msys_env; then
   SF_PLUGINS+=(nvm_win scoop)
 
   alias cat='bat'
-  alias dev='cd ~/Dev'
 else
   # options for non-windows systems
   SF_PLUGINS+=(nvm)
 
   alias cat='batcat'
-  alias dev='cd ~/dev'
   alias fd='fdfind'
 
   # nvm
@@ -79,3 +77,4 @@ source "$SHELL_UTILS"/pnpm.sh
 source ~/.dotfiles/shell/games.sh
 
 source ~/.dotfiles/lsd/aliases.sh
+alias dev='cd ~/dev'
