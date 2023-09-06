@@ -10,6 +10,10 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install build-essential bat fd-find fzf gh jq ripgrep shellcheck fonts-firacode
 
+if [[ ! -d ~/.local/bin ]]; then
+  mkdir -p ~/.local/bin
+fi
+
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
 
