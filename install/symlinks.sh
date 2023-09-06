@@ -10,5 +10,5 @@ ln -s ~/.dofiles/git ~/.config/git
 ln -s ~/.dotfiles/wezterm ~/.config/wezterm
 
 # shell
-ln -s ~/.dotfiles/shell/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/shell/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/shell/main.sh ~/.bashrc
+ln -s ~/.dotfiles/shell/main.sh ~/.zshrc
