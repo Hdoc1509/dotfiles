@@ -15,6 +15,9 @@ For Windows you will need [`scoop`](https://github.com/ScoopInstaller/Install#in
 This installation is supposed to run a fresh install of all the tools.
 
 ```bash
+git clone --depth 1 https://github.com/Hdoc1509/shell-fns.git ~/.config/shell-fns
+git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/gitstatus
+
 git clone https://github.com/Hdoc1509/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles
