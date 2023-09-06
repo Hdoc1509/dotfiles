@@ -68,11 +68,7 @@ else
 fi
 
 # FZF OPTIONS
-FZF_DEFAULT_COMMAND=$(tr '\n' ' ' <~/.dotfiles/fzf/command.conf)
-export FZF_DEFAULT_COMMAND
-
-FZF_DEFAULT_OPTS=$(tr '\n' ' ' <~/.dotfiles/fzf/options.conf)
-export FZF_DEFAULT_OPTS
+source ~/.dotfiles/fzf/fzf-options.sh
 
 # count git commits
 # git rev-list --count master|HEAD
