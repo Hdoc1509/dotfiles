@@ -1,4 +1,4 @@
-echo "Start installing symlinks"
+info_log "Start installing symlinks..."
 
 # gh
 ln -s ~/.dotfiles/gh ~/.config/gh
