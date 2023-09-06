@@ -7,7 +7,7 @@ echo "Symlinks installed!"
 echo "Installing apps..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf gh jq nvm ripgrep shellcheck
+sudo apt install build-essential bat fd-find fzf gh jq nvm ripgrep shellcheck fonts-firacode
 
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
