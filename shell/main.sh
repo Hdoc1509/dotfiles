@@ -62,45 +62,9 @@ PROMPT_THEME='powerblack'
 GITSTATUS_LOG_LEVEL=DEBUG
 
 if is_zsh; then
-  source ~/.dotfiles/shell/prompt/gitstatus.zsh
-
-  # KEY-BINDINGS
-  # Home and End keys
-  bindkey '^[[H' beginning-of-line
-  bindkey '^[[F' end-of-line
-
-  # Ctrl-Left/Right
-  bindkey '\e[1;5C' forward-word
-  bindkey '\e[1;5D' backward-word
-
-  # Delete key
-  bindkey '\e[3~' delete-char
-
-  # Delete word at right of cursor
-  bindkey '\e[3;5~' kill-word # Crtl-Delete
-
-  # Ctrl-Delete / Alt+d - Delete word at right of the cursor
-  # Ctrl-w              - Delete word at left of the cursor
-
-  # Ctrl+k         - Delete all right of the cursor
-  # Ctrl+u         - Delete all left of the cursor
-
-  alias s='source ~/.zshrc'
-  alias xsh='exec zsh'
+  source ~/.dotfiles/shell/zsh-options.zsh
 else
-  source ~/.dotfiles/shell/prompt/gitstatus.sh
-
-  # enable bash completion in interactive shells
-  if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-      . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-      . /etc/bash_completion
-    fi
-  fi
-
-  alias s='source ~/.bashrc'
-  alias xsh='exec bash'
+  source ~/.dotfiles/shell/bash-options.sh
 fi
 
 # FZF OPTIONS
