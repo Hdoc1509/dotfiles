@@ -10,31 +10,13 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 export EDITOR=nvim
 
-# SHELL-FNS PLUGINS
-# see: https://github.com/Hdoc1509/shell-fns
-export SF_EDITOR='nv'
-
-export SF_NV_FLAGS_CUR_FOLDER='-c ":FZF"'
-export SF_PLUGINS=(
-  git
-  gh gh_issue gh_release
-  neovim
-  npm
-  pnpm
-  vitejs
-)
-
 if is_msys_env; then
   # Enable Symlink on git-bash and msys environment
   export MSYS=winsymlinks:nativestrict
 
-  SF_PLUGINS+=(nvm_win scoop)
-
   alias cat='bat'
 else
   # options for non-windows systems
-  SF_PLUGINS+=(nvm)
-
   alias cat='batcat'
   alias fd='fdfind'
 
@@ -53,7 +35,8 @@ else
   # pnpm end
 fi
 
-source ~/.shell-fns/main.sh
+# SHELL PLUGINS
+source ~/.dotfiles/shell/plugins.sh
 
 # CUSTOM PROMPT
 PROMPT_THEME='powerblack'
