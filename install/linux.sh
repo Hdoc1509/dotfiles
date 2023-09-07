@@ -47,6 +47,12 @@ nvm install --lts
 info_log "Enabling pnpm and yarn with corepack..."
 corepack enable
 
+info_log "Setting up pnpm"
+pnpm setup
+
+# Restoring shell/main.sh if there are changes made by `pnpm setup`
+git diff --quiet shell/main.sh || git restore shell/main.sh
+
 info_log "Restoring pnpm global packages..."
 pnpm_restore_global
 

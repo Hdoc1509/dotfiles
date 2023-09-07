@@ -16,7 +16,7 @@ if is_msys_env; then
 
   alias cat='bat'
 else
-  # options for non-windows systems
+  # options for ubuntu-based systems
   alias cat='batcat'
   alias fd='fdfind'
 
@@ -27,7 +27,7 @@ else
   # nvm end
 
   # pnpm
-  export PNPM_HOME="/home/hdoc/.local/share/pnpm"
+  export PNPM_HOME="$HOME/.local/share/pnpm"
   case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
