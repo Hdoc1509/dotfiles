@@ -38,8 +38,8 @@ mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
 
 info_log "Installing neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-mv nvim.appimage ~/.local/bin
+chmod +x nvim.appimage
+mv nvim.appimage ~/.local/bin/nvim
 
 info_log "Installing Node.js LTS..."
 nvm install --lts
