@@ -8,7 +8,7 @@ success_log "Symlinks installed!"
 info_log "Installing apps..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf gh jq ripgrep shellcheck fonts-firacode
+sudo apt install build-essential bat fd-find fzf gh jq ripgrep shellcheck fonts-firacode xclip zsh
 
 if [[ ! -d ~/.local/bin ]]; then
   mkdir -p ~/.local/bin
