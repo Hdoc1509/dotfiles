@@ -48,6 +48,8 @@ else
   source ~/.dotfiles/shell/bash-options.sh
 fi
 
+eval "$(dircolors ~/.dotfiles/lsd/.dircolors)"
+
 # FZF OPTIONS
 source ~/.dotfiles/fzf/fzf-options.sh
 
