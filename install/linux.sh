@@ -56,4 +56,7 @@ git diff --quiet shell/main.sh || git restore shell/main.sh
 info_log "Restoring pnpm global packages..."
 pnpm_restore_global
 
+# set timedate to local
+sudo timedatectl set-local-rtc 1
+
 installation_complete_log
