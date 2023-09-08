@@ -44,3 +44,19 @@ There are some shortcuts and scripts for Windows inside `windows` folder.
 
 - Shortcuts must be copied into `C:\Windows\` folder.
 - Scripts must be run as administrator by clicking `Run as administrator`.
+
+## Trouble-shooting
+
+If you have problems with screen resolution on Ubuntu-based Linux distributions,
+run the following command:
+
+```bash
+cd ~/.dotfiles
+
+# for prevent calling lsd instead of built-in cat
+# ↓ ↓ ↓ ↓ ↓
+/usr/bin/cat shell/.profile >> ~/.profile
+
+# then execute ./shell/.profile
+./shell/.profile
+```
