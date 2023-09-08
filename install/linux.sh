@@ -59,4 +59,7 @@ pnpm_restore_global
 # set timedate to local
 sudo timedatectl set-local-rtc 1
 
+# add watchOS theme
+pnpm dlx tiged B00merang-Project/watchOS ~/.themes/watchOS
+
 installation_complete_log
