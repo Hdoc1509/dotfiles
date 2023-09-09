@@ -167,13 +167,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "sqlite",
-            "Version": "3.42.0",
-            "Updated": "\/Date(1684689134761)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Name": "taskbarx",
             "Version": "1.7.8.0",
