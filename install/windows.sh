@@ -21,6 +21,9 @@ scoop import ~/.dotfiles/scoop/backup.json
 info_log "Installing Node.js LTS..."
 nvm install lts
 
+info_log "Setting up pnpm"
+pnpm setup
+
 info_log "Restoring pnpm global packages..."
 pnpm_restore_global
 
