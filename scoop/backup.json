@@ -63,13 +63,6 @@
         {
             "Info": "",
             "Source": "extras",
-            "Name": "dopamine",
-            "Version": "2.0.9",
-            "Updated": "\/Date(1684708669182)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
             "Name": "etcher",
             "Version": "1.18.11",
             "Updated": "\/Date(1689547527323)\/"
