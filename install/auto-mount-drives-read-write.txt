@@ -1,0 +1,10 @@
+1. Open 'Disks' app
+2. Select drive, and 'Edit Mount Options'
+3. Disable 'User Session Defaults'
+4. Enable 'Mount at system startup' and 'Show in user interface'
+5. Add: 'uid=1000,gid=1000' to mounting options
+
+
+NOTE: Be sure to disable 'Fast Boot' on Windows.
+If you do not know how, follow this guide:
+https://help.uaudio.com/hc/en-us/articles/213195423-How-To-Disable-Fast-Startup-in-Windows-10
