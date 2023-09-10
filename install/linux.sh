@@ -58,7 +58,15 @@ pnpm_restore_global
 # set timedate to local
 sudo timedatectl set-local-rtc 1
 
-# add watchOS theme
+info_log "Installing watchOS theme..."
 pnpm dlx tiged B00merang-Project/watchOS ~/.themes/watchOS
+
+info_log "Installing qredshift applet"
+wget https://cinnamon-spices.linuxmint.com/files/applets/qredshift@quintao.zip &&
+  unzip qredshift@quintao.zip -d ~/.local/share/cinnamon/applets &&
+  rm qredshift@quintao.zip
+info_log "Removing redshift-gtk for avoid conflicts"
+sudo apt remove redshift-gtk
+info_log "Enable the qredshift applet with Applets manager"
 
 installation_complete_log
