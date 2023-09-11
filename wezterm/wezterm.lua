@@ -17,7 +17,7 @@ return {
     family = 'FiraCode NF',
     harfbuzz_features = { 'liga=1' },
   }),
-  font_size = 12.5,
+  font_size = 12,
 
   -- GUI
   hide_tab_bar_if_only_one_tab = true,
