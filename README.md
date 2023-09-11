@@ -53,7 +53,7 @@ run the following command:
 ```bash
 cd ~/.dotfiles
 
-# for prevent calling lsd instead of built-in cat
+# for prevent calling batcat instead of built-in cat
 # ↓ ↓ ↓ ↓ ↓
 /usr/bin/cat shell/.profile >> ~/.profile
 
