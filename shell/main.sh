@@ -33,6 +33,9 @@ else
   *) export PATH="$PNPM_HOME:$PATH" ;;
   esac
   # pnpm end
+
+  # this is for prevent weird background on folders of mounted drives
+  eval "$(dircolors ~/.dotfiles/lsd/.dircolors)"
 fi
 
 # SHELL PLUGINS
@@ -47,8 +50,6 @@ if is_zsh; then
 else
   source ~/.dotfiles/shell/bash-options.sh
 fi
-
-eval "$(dircolors ~/.dotfiles/lsd/.dircolors)"
 
 # FZF OPTIONS
 source ~/.dotfiles/fzf/fzf-options.sh
