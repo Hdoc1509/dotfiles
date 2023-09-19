@@ -59,7 +59,7 @@ pnpm_restore_global
 sudo timedatectl set-local-rtc 1
 
 info_log "Installing watchOS theme..."
-pnpm dlx tiged B00merang-Project/watchOS ~/.themes/watchOS
+pnpm dlx tiged Hdoc1509/watchOS ~/.themes/watchOS
 
 info_log "Installing qredshift applet"
 wget https://cinnamon-spices.linuxmint.com/files/applets/qredshift@quintao.zip &&
