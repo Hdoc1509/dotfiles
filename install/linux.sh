@@ -6,9 +6,10 @@ source ~/.dotfiles/install/symlinks.sh
 success_log "Symlinks installed!"
 
 info_log "Installing apps..."
+sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf gh jq ripgrep shellcheck fonts-firacode xclip zsh
+sudo apt install build-essential bat fd-find fzf git gh jq ripgrep shellcheck fonts-firacode xclip zsh
 
 if [[ ! -d ~/.local/bin ]]; then
   mkdir -p ~/.local/bin
