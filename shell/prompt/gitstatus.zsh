@@ -39,6 +39,12 @@ function my_set_prompt() {
 
 	# SETTING TERMINAL TITLE
 	term_title
+  # Wezterm: same working dir for splits and new tabs
+  # See:
+  #   https://wezfurlong.org/wezterm/shell-integration.html#osc-7-escape-sequence-to-set-the-working-directory
+  #   https://github.com/wez/wezterm/blob/main/assets/shell-integration/wezterm.sh#L419C43-L419C43
+  # TODO: Test it on Windows
+  printf "\033]7;file://${HOSTNAME}${PWD}\033\\"
 
   setopt no_prompt_{bang,subst} prompt_percent  # enable/disable correct prompt expansions
 }
