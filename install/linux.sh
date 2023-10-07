@@ -35,6 +35,8 @@ curl -LO https://github.com/wez/wezterm/releases/download/20230712-072601-f4abf8
 chmod +x WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
 
 mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
+cp ~/.dotfiles/wezterm/icon.png ~/.local/share/icons/wezterm-icon.png
+cp ~/.dotfiles/wezterm/wezterm.desktop ~/.local/share/applications/wezterm.desktop
 
 info_log "Installing neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage

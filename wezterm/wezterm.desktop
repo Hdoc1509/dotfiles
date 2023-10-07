@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=WezTerm
+Comment=Wez's Terminal Emulator
+Keywords=shell;prompt;command;commandline;cmd;
+Icon=wezterm-icon
+TryExec=wezterm
+Exec=wezterm start --cwd .
+Type=Application
+Categories=System;TerminalEmulator;Utility;
+Terminal=false
+StartupNotify=true
