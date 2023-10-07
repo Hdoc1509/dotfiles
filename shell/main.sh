@@ -64,3 +64,4 @@ source ~/.dotfiles/shell/games.sh
 
 source ~/.dotfiles/lsd/aliases.sh
 alias dev='cd ~/dev'
+alias cati='wezterm catimg'
