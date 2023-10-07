@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Firefox Developer Edition
+GenericName=Firefox Developer Edition
+Exec=/opt/firefox-dev/firefox %u
+Terminal=false
+Icon=/opt/firefox-dev/browser/chrome/icons/default/default128.png
+Type=Application
+Categories=Application;Network;X-Developer;
+Comment=Firefox Developer Edition Web Browser.
+# This is for keep the new window in the same icon in panel
+StartupNotify=true
+Actions=new-window;
+
+[Desktop Action new-window]
+Name=Open a New Window
+Exec=/opt/firefox-dev/firefox -new-window

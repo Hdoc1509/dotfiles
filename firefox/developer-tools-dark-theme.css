@@ -1,0 +1,29 @@
+/* Follow tutorial from: */
+/*   https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/ */
+/* copy this file to $FIREFOX_PROFILE_FOLDER/chrome/userContent.css */
+/* If userContent.scss doesn't work rename it to userChrome.css */
+/* You need to restart Firefox to see the changes */
+
+:root.theme-dark {
+  --theme-body-background: #050607 !important;
+  --theme-sidebar-background: #101416 !important;
+
+  --theme-tab-toolbar-background: #161A1E !important;
+  --theme-toolbar-background: #282E35 !important;
+  --theme-selection-background: #4A5562 !important;
+
+  --theme-body-color: #D6D6D6 !important;
+  --theme-body-color-alt: #D6D6D6 !important;
+  --theme-content-color1: #D6D6D6 !important;
+  --theme-content-color2: #D6D6D6 !important;
+  --theme-content-color3: #D6D6D6 !important;
+
+  --theme-highlight-green: #8BF9A6 !important;
+  --theme-highlight-blue: #00F9FF !important;
+  --theme-highlight-bluegrey: white !important;
+  --theme-highlight-lightorange: #FF5A2C !important;
+  --theme-highlight-orange: yellow !important;
+  --theme-highlight-red: #C5002C !important;
+  --theme-highlight-red: #A284E0 !important;
+  --theme-highlight-pink: #F02898 !important;
+}
