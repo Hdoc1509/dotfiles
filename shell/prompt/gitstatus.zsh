@@ -43,8 +43,10 @@ function my_set_prompt() {
   # See:
   #   https://wezfurlong.org/wezterm/shell-integration.html#osc-7-escape-sequence-to-set-the-working-directory
   #   https://github.com/wez/wezterm/blob/main/assets/shell-integration/wezterm.sh#L419C43-L419C43
-  # TODO: Test it on Windows
-  printf "\033]7;file://${HOSTNAME}${PWD}\033\\"
+  if ! is_msys_env; then
+    printf "\033]7;file://${HOSTNAME}${PWD}\033\\"
+  fi
+
 
   setopt no_prompt_{bang,subst} prompt_percent  # enable/disable correct prompt expansions
 }
