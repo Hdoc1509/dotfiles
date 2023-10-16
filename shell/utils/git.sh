@@ -43,3 +43,17 @@ gtdi() {
       xargs -I {} git tag --delete '{}'
   fi
 }
+
+# Stage files interactively
+gai() {
+  local files
+  files=$(git ls-files -m -o --exclude-standard)
+
+  if [[ -z $files ]]; then
+    echo "No files to stage"
+  else
+    echo "${files}" |
+      __git_fzf "Stage file(s) | Press <Tab> for toggle selection" |
+      xargs -I {} git add '{}'
+  fi
+}
