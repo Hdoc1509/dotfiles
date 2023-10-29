@@ -71,7 +71,7 @@ cp \
   ~/.local/share/applications/firefox-dev.desktop
 
 info_log "Installing watchOS theme..."
-pnpm dlx tiged Hdoc1509/watchOS ~/.themes/watchOS
+git clone https://github.com/Hdoc1509/watchOS ~/.themes/watchOS
 
 info_log "Installing qredshift applet"
 wget https://cinnamon-spices.linuxmint.com/files/applets/qredshift@quintao.zip &&
