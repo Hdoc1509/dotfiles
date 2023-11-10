@@ -4,29 +4,29 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1693269229000)\/",
+                "value": "\/Date(1699576331000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, August 28, 2023 7:33:49 PM"
+                "DateTime": "Thursday, November 9, 2023 7:32:11 PM"
             },
-            "Manifests": 1891
+            "Manifests": 1888
         },
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1693269218000)\/",
+                "value": "\/Date(1699576350000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, August 28, 2023 7:33:38 PM"
+                "DateTime": "Thursday, November 9, 2023 7:32:30 PM"
             },
-            "Manifests": 1221
+            "Manifests": 1262
         },
         {
             "Name": "Syndim_scoop-bucket",
             "Source": "https://github.com/Syndim/scoop-bucket",
             "Updated": {
-                "value": "\/Date(1693271068000)\/",
+                "value": "\/Date(1699405615000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, August 28, 2023 8:04:28 PM"
+                "DateTime": "Tuesday, November 7, 2023 8:06:55 PM"
             },
             "Manifests": 9
         }
@@ -50,8 +50,8 @@
             "Info": "",
             "Source": "main",
             "Name": "bat",
-            "Version": "0.23.0",
-            "Updated": "\/Date(1679764410399)\/"
+            "Version": "0.24.0",
+            "Updated": "\/Date(1699583290023)\/"
         },
         {
             "Info": "",
@@ -71,8 +71,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fd",
-            "Version": "8.7.0",
-            "Updated": "\/Date(1693275395364)\/"
+            "Version": "8.7.1",
+            "Updated": "\/Date(1699583292766)\/"
         },
         {
             "Info": "",
@@ -85,8 +85,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.42.0",
-            "Updated": "\/Date(1687124051122)\/"
+            "Version": "0.43.0",
+            "Updated": "\/Date(1699583295252)\/"
         },
         {
             "Info": "",
@@ -99,29 +99,29 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.33.0",
-            "Updated": "\/Date(1692889017175)\/"
+            "Version": "2.38.0",
+            "Updated": "\/Date(1699583298846)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "jq",
-            "Version": "1.6",
-            "Updated": "\/Date(1690147964839)\/"
+            "Version": "1.7",
+            "Updated": "\/Date(1699583300778)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "lsd",
-            "Version": "0.23.1",
-            "Updated": "\/Date(1682476810338)\/"
+            "Version": "1.0.0",
+            "Updated": "\/Date(1699583303641)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "neovim",
-            "Version": "0.9.1",
-            "Updated": "\/Date(1685929595399)\/"
+            "Version": "0.9.4",
+            "Updated": "\/Date(1699583328460)\/"
         },
         {
             "Info": "",
@@ -134,15 +134,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "peazip",
-            "Version": "9.3.0",
-            "Updated": "\/Date(1687728982634)\/"
+            "Version": "9.5.0",
+            "Updated": "\/Date(1699583337123)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "8.6.12",
-            "Updated": "\/Date(1691341230106)\/"
+            "Version": "8.10.2",
+            "Updated": "\/Date(1699583347109)\/"
         },
         {
             "Info": "",
