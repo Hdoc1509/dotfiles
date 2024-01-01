@@ -4,31 +4,31 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1701030176000)\/",
+                "value": "\/Date(1704126397000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Sunday, November 26, 2023 3:22:56 PM"
+                "DateTime": "Monday, January 1, 2024 11:26:37 AM"
             },
-            "Manifests": 1889
+            "Manifests": 1892
         },
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1701030225000)\/",
+                "value": "\/Date(1704112185000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Sunday, November 26, 2023 3:23:45 PM"
+                "DateTime": "Monday, January 1, 2024 7:29:45 AM"
             },
-            "Manifests": 1265
+            "Manifests": 1268
         },
         {
             "Name": "Syndim_scoop-bucket",
             "Source": "https://github.com/Syndim/scoop-bucket",
             "Updated": {
-                "value": "\/Date(1700615490000)\/",
+                "value": "\/Date(1703725614000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, November 21, 2023 8:11:30 PM"
+                "DateTime": "Wednesday, December 27, 2023 8:06:54 PM"
             },
-            "Manifests": 9
+            "Manifests": 10
         }
     ],
     "apps": [
@@ -71,8 +71,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fd",
-            "Version": "8.7.1",
-            "Updated": "\/Date(1699583292766)\/"
+            "Version": "9.0.0",
+            "Updated": "\/Date(1704132331135)\/"
         },
         {
             "Info": "",
@@ -85,8 +85,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.44.1",
-            "Updated": "\/Date(1701042309701)\/"
+            "Version": "0.45.0",
+            "Updated": "\/Date(1704132338474)\/"
         },
         {
             "Info": "",
@@ -99,15 +99,15 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.39.1",
-            "Updated": "\/Date(1701042312173)\/"
+            "Version": "2.40.1",
+            "Updated": "\/Date(1704132341497)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "jq",
-            "Version": "1.7",
-            "Updated": "\/Date(1699583300778)\/"
+            "Version": "1.7.1",
+            "Updated": "\/Date(1704132346162)\/"
         },
         {
             "Info": "",
@@ -120,8 +120,8 @@
             "Info": "",
             "Source": "main",
             "Name": "neovim",
-            "Version": "0.9.4",
-            "Updated": "\/Date(1699583328460)\/"
+            "Version": "0.9.5",
+            "Updated": "\/Date(1704132376203)\/"
         },
         {
             "Info": "",
@@ -134,15 +134,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "peazip",
-            "Version": "9.5.0",
-            "Updated": "\/Date(1699583337123)\/"
+            "Version": "9.6.0",
+            "Updated": "\/Date(1704132385190)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "8.11.0",
-            "Updated": "\/Date(1701042324149)\/"
+            "Version": "8.13.1",
+            "Updated": "\/Date(1704132394898)\/"
         },
         {
             "Info": "",
@@ -155,8 +155,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ripgrep",
-            "Version": "14.0.0",
-            "Updated": "\/Date(1701042326978)\/"
+            "Version": "14.0.3",
+            "Updated": "\/Date(1704132399994)\/"
         },
         {
             "Info": "",
