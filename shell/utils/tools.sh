@@ -1,8 +1,11 @@
 is_zsh() { [[ -n $ZSH_VERSION ]]; }
 is_msys_env() { [[ "$OSTYPE" == 'msys' ]]; }
-term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
-mkcd() { mkdir -p "$1" && cd "$1" || return; }
 is_mintty_term() { [[ "$TERM_PROGRAM" == 'mintty' ]]; }
+
+term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
+
+mkcd() { mkdir -p "$1" && cd "$1" || return; }
+cdi() { cd "$(fd --type d "${1:-.}" | fzf --select-1 --exit-0)" || return; }
 
 echolor() {
   if [[ -z $1 ]]; then
