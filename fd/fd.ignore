@@ -1,8 +1,8 @@
 # DIRECTORIES
 dist
 node_modules
-.git/*
-.netlify/*
+.git
+.netlify
 
 # FILES
 *.exe
