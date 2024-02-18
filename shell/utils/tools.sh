@@ -7,6 +7,8 @@ term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
 mkcd() { mkdir -p "$1" && cd "$1" || return; }
 cdi() { cd "$(fd --type d "${1:-.}" | fzf --select-1 --exit-0)" || return; }
 
+# TODO: Add options
+#   Follow https://www.redhat.com/sysadmin/arguments-options-bash-scripts
 echolor() {
   if [[ -z $1 ]]; then
     echo "Usage: echolor <text> [color] [background]"
@@ -14,15 +16,18 @@ echolor() {
     echo "[color]: number between 0 and 255. Default: 7 (white)"
     echo "[background]: number between 0 and 255. Default: 0 (black)"
     echo
+    echo "NOTE: use '-' as value to skip color or background"
+    echo
     echo "Run fg_colors to see available colors"
     echo "Run bg_colors to see available backgrounds"
     return
   fi
 
-  tput setaf "${2:-7}"
-  tput setab "${3:-0}"
+  [[ $2 != '-' ]] && tput setaf "${2:-7}"
+  [[ $3 != '-' ]] && tput setab "${3:-0}"
   echo -n "${1}"
   tput sgr0
+  # TODO: Remove line below
   echo
 }
 
