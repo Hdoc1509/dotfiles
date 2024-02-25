@@ -14,7 +14,7 @@ return {
 
   -- FONT
   font = wt.font({
-    family = 'FiraCode NF',
+    family = 'Fira Code',
     harfbuzz_features = { 'liga=1' },
   }),
   font_size = 12,
