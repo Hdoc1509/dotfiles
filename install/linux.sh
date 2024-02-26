@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ~/.dotfiles/install/messages.sh
+source ~/.dotfiles/shell/utils/pnpm.sh
 
 source ~/.dotfiles/install/symlinks.sh
 success_log "Symlinks installed!"
