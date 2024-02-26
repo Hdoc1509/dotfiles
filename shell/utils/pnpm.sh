@@ -17,3 +17,19 @@ pnpm_restore_global() {
     echo "${LIGHTRED}Error: There is no pnpm backup file to import"
   fi
 }
+
+# uninstall packages interactively
+pnUi() {
+  local packages
+  packages=$(
+    jq -r '.dependencies,.devDependencies|keys[]' package.json |
+      fzf --height=20% --multi |
+      tr '\n' ' '
+  )
+
+  if [[ -z $packages ]]; then
+    echo "No packages selected"
+  else
+    echo "${packages}" | xargs pnpm uninstall
+  fi
+}
