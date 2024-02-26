@@ -7,6 +7,8 @@ success_log "Symlinks installed!"
 
 info_log "Installing apps..."
 sudo add-apt-repository ppa:git-core/ppa
+curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
 sudo apt update
 sudo apt upgrade -y
 sudo apt install build-essential bat fd-find fzf git gh jq ripgrep shellcheck fonts-firacode xclip zsh
@@ -29,14 +31,6 @@ sudo apt install lsd ||
 
 info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-
-info_log "Installing wezterm..."
-curl -LO https://github.com/wez/wezterm/releases/download/20230712-072601-f4abf8fd/WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
-chmod +x WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage
-
-mv ./WezTerm-20230712-072601-f4abf8fd-Ubuntu20.04.AppImage ~/.local/bin/wezterm
-cp ~/.dotfiles/wezterm/icon.png ~/.local/share/icons/wezterm-icon.png
-cp ~/.dotfiles/wezterm/wezterm.desktop ~/.local/share/applications/wezterm.desktop
 
 info_log "Installing neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
