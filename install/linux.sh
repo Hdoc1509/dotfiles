@@ -21,13 +21,13 @@ fi
 ln -s "$(which fdfind)" ~/.local/bin/fd
 
 info_log "Installing lsd..."
-sudo apt install lsd ||
-  warn_log "Failed to install lsd" &&
-  info_log "Trying to install lsd with wget..." &&
-  wget \
-    https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-musl_1.0.0_amd64.deb \
-    -O /tmp/lsd-install.deb &&
-  sudo dpkg -i /tmp/lsd-install.deb
+sudo apt install lsd || warn_log "Failed to install lsd with apt"
+info_log "Trying to install lsd with wget..."
+wget -q \
+  https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-musl_1.0.0_amd64.deb \
+  -O /tmp/lsd-install.deb
+sudo dpkg -i /tmp/lsd-install.deb &>/dev/null
+rm /tmp/lsd-install.deb
 
 info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
