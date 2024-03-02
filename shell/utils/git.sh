@@ -1,3 +1,4 @@
+__git_fzf() { fzf --height=20% --header="$1"; }
 __git_fzf_multi() { fzf --height=20% --multi --header="$1"; }
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
@@ -11,7 +12,7 @@ gswi() {
     echo "No branches to switch to"
   else
     echo "${branches}" |
-      fzf --height=20% --header='Switch to branch' |
+      __git_fzf 'Switch to branch' |
       xargs -I {} git switch '{}'
   fi
 }
