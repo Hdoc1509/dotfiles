@@ -77,7 +77,7 @@ gshci() {
 # Show diff info interactively
 gdi() {
   local files
-  files=$(git diff --name-only)
+  files=$(git ls-files -m -o --exclude-standard)
 
   if [[ -z $files ]]; then
     echo "No files to show diff"
