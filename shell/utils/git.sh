@@ -48,7 +48,7 @@ gtdi() {
 # Stage files interactively
 gai() {
   local files
-  files=$(git ls-files -m -o --exclude-standard)
+  files=$(git diff --name-only)
 
   if [[ -z $files ]]; then
     echo "No files to stage"
