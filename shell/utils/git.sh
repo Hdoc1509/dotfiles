@@ -73,3 +73,15 @@ gshci() {
 
   echo "${commits}" | __git_fzf | awk '{ print $1}' | xargs -I {} git show '{}'
 }
+
+# Show diff info interactively
+gdi() {
+  local files
+  files=$(git diff --name-only)
+
+  if [[ -z $files ]]; then
+    echo "No files to show diff"
+  else
+    echo "${files}" | __git_fzf "Show diff" | xargs -I {} git diff '{}'
+  fi
+}
