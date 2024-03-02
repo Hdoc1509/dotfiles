@@ -58,3 +58,18 @@ gai() {
       xargs -I {} git add '{}'
   fi
 }
+
+# Show commit info interactively
+gshci() {
+  local limit=$1
+  local commits
+  local commit_hash
+
+  if [[ -z $limit ]]; then
+    commits=$(git log --oneline)
+  else
+    commits=$(git log --oneline -n "$limit")
+  fi
+
+  echo "${commits}" | __git_fzf | awk '{ print $1}' | xargs -I {} git show '{}'
+}
