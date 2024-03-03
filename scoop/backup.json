@@ -4,29 +4,29 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1704126397000)\/",
+                "value": "\/Date(1709426071000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, January 1, 2024 11:26:37 AM"
+                "DateTime": "Saturday, March 2, 2024 7:34:31 PM"
             },
-            "Manifests": 1892
+            "Manifests": 1988
         },
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1704112185000)\/",
+                "value": "\/Date(1709425990000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, January 1, 2024 7:29:45 AM"
+                "DateTime": "Saturday, March 2, 2024 7:33:10 PM"
             },
-            "Manifests": 1268
+            "Manifests": 1293
         },
         {
             "Name": "Syndim_scoop-bucket",
             "Source": "https://github.com/Syndim/scoop-bucket",
             "Updated": {
-                "value": "\/Date(1703725614000)\/",
+                "value": "\/Date(1709082241000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, December 27, 2023 8:06:54 PM"
+                "DateTime": "Tuesday, February 27, 2024 8:04:01 PM"
             },
             "Manifests": 10
         }
@@ -78,29 +78,29 @@
             "Info": "",
             "Source": "extras",
             "Name": "flux",
-            "Version": "4.124",
-            "Updated": "\/Date(1686519397693)\/"
+            "Version": "4.131",
+            "Updated": "\/Date(1709432083718)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.45.0",
-            "Updated": "\/Date(1704132338474)\/"
+            "Version": "0.46.1",
+            "Updated": "\/Date(1709432087952)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "gcc",
-            "Version": "11.2.0",
-            "Updated": "\/Date(1685833910493)\/"
+            "Version": "13.2.0",
+            "Updated": "\/Date(1709432159133)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.40.1",
-            "Updated": "\/Date(1704132341497)\/"
+            "Version": "2.44.1",
+            "Updated": "\/Date(1709432163758)\/"
         },
         {
             "Info": "",
@@ -134,15 +134,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "peazip",
-            "Version": "9.6.0",
-            "Updated": "\/Date(1704132385190)\/"
+            "Version": "9.7.1",
+            "Updated": "\/Date(1709432174419)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "8.13.1",
-            "Updated": "\/Date(1704132394898)\/"
+            "Version": "8.15.4",
+            "Updated": "\/Date(1709432183565)\/"
         },
         {
             "Info": "",
@@ -155,8 +155,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ripgrep",
-            "Version": "14.0.3",
-            "Updated": "\/Date(1704132399994)\/"
+            "Version": "14.1.0",
+            "Updated": "\/Date(1709432186710)\/"
         },
         {
             "Info": "",
@@ -183,8 +183,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wezterm",
-            "Version": "20230712-072601-f4abf8fd",
-            "Updated": "\/Date(1689354304651)\/"
+            "Version": "20240203-110809-5046fc22",
+            "Updated": "\/Date(1709432201550)\/"
         },
         {
             "Info": "",
