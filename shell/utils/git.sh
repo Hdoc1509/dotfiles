@@ -48,13 +48,14 @@ gtdi() {
 # Stage files interactively
 gai() {
   local files
-  files=$(git ls-files -m -o --exclude-standard)
+  files=$(git status --short)
 
   if [[ -z $files ]]; then
     echo "No files to stage"
   else
     echo "${files}" |
       __git_fzf_multi "Stage file(s) | Press <Tab> for toggle selection" |
+      awk '{ print $2 }' |
       xargs -I {} git add '{}'
   fi
 }
