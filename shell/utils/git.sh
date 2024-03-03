@@ -48,7 +48,7 @@ gtdi() {
 # Stage files interactively
 gai() {
   local files
-  files=$(git status --short)
+  files=$(git status --short | sed '/^A/d')
 
   if [[ -z $files ]]; then
     echo "No files to stage"
