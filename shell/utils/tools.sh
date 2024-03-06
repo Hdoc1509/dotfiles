@@ -6,7 +6,10 @@ term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
 
 mkcd() { mkdir -p "$1" && cd "$1" || return; }
 cdi() {
-  cd "$(fd --type d "${1:-.}" | fzf --height=20% --select-1 --exit-0)" || return
+  cd "$(
+    fd --type directory --case-sensitive "${1:-.}" |
+      fzf --height=20% --select-1 --exit-0
+  )" || return
 }
 
 # TODO: Add options
