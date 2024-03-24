@@ -78,11 +78,14 @@ gshci() {
 # Show diff info interactively
 gdi() {
   local files
-  files=$(git ls-files -m -o --exclude-standard)
+  files=$(git status --short | grep '.M')
 
   if [[ -z $files ]]; then
     echo "No files to show diff"
   else
-    echo "${files}" | __git_fzf "Show diff" | xargs -I {} git diff '{}'
+    echo "${files}" |
+      __git_fzf "Show diff" |
+      awk '{ print $2 }' |
+      xargs -I {} git diff '{}'
   fi
 }
