@@ -1,5 +1,7 @@
 __git_fzf() { fzf --height=20% --header="$1"; }
-__git_fzf_multi() { fzf --height=20% --multi --header="$1"; }
+__git_fzf_multi() {
+  fzf --height=20% --multi --header="$1 | Press <Tab> for toggle selection"
+}
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
 
@@ -26,7 +28,7 @@ gbdi() {
     echo "No branches to delete"
   else
     echo "${branches}" |
-      __git_fzf_multi "Delete branch(s) | Press <Tab> for toggle selection" |
+      __git_fzf_multi "Delete branch(s)" |
       xargs -I {} git branch --delete '{}'
   fi
 }
@@ -40,7 +42,7 @@ gtdi() {
     echo "No tags to delete"
   else
     echo "${tags}" |
-      __git_fzf_multi "Delete tag(s) | Press <Tab> for toggle selection" |
+      __git_fzf_multi "Delete tag(s)" |
       xargs -I {} git tag --delete '{}'
   fi
 }
@@ -54,7 +56,7 @@ gai() {
     echo "No files to stage"
   else
     echo "${files}" |
-      __git_fzf_multi "Stage file(s) | Press <Tab> for toggle selection" |
+      __git_fzf_multi "Stage file(s)" |
       awk '{ print $2 }' |
       xargs -I {} git add '{}'
   fi
