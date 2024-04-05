@@ -59,6 +59,7 @@ SETUID 37;41 # file that is setuid (u+s)
 SETGID 30;43 # file that is setgid (g+s)
 CAPABILITY 30;41 # file with capability
 STICKY_OTHER_WRITABLE DIR # dir that is sticky and other-writable (+t,o+w)
+# NOTE: It uses the same color as DIR
 OTHER_WRITABLE DIR # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:

@@ -34,7 +34,11 @@ else
   esac
   # pnpm end
 
-  # this is for prevent weird background on folders of mounted drives
+  # NOTE: prevent weird background on folders of mounted drives
+  #   issue: https://github.com/lsd-rs/lsd/issues/671
+  # related:
+  #   https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output
+  #   https://unix.stackexchange.com/questions/241726/fix-ls-colors-for-directories-with-777-permission
   eval "$(dircolors ~/.dotfiles/lsd/.dircolors)"
 fi
 
