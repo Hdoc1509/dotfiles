@@ -86,7 +86,7 @@ gdi() {
     echo "No files to show diff"
   else
     echo "${files}" |
-      __git_fzf "Show diff" |
+      __git_fzf_multi "Show diff" |
       awk '{ print $2 }' |
       xargs -I {} git diff '{}'
   fi
