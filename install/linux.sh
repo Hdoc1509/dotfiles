@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ~/.dotfiles/install/configs.sh
 source ~/.dotfiles/install/messages.sh
 source ~/.dotfiles/shell/utils/pnpm.sh
 
@@ -76,5 +77,11 @@ wget https://cinnamon-spices.linuxmint.com/files/applets/qredshift@quintao.zip &
 info_log "Removing redshift-gtk for avoid conflicts"
 sudo apt remove redshift-gtk
 info_log "Enable the qredshift applet with Applets manager"
+
+info_log "Setting up git config"
+setup_git
+
+info_log "Setting up github-cli"
+setup_github_cli
 
 installation_complete_log
