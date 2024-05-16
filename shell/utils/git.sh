@@ -21,7 +21,7 @@ gswi() {
 
 # Delete branches interactively
 gbdi() {
-  local branches
+  local branches new_branches
   branches=$(git_get_branches)
 
   if [[ $branches == $(git_get_current_branch) || -z $branches ]]; then
@@ -30,6 +30,13 @@ gbdi() {
     echo "${branches}" |
       __git_fzf_multi "Delete branch(s)" |
       xargs -I {} git branch --delete '{}'
+
+    new_branches=$(git_get_branches)
+
+    if [[ $branches != "$new_branches" ]]; then
+      echo "If you want to delete remote branch use:"
+      echo "git push origin --delete <branch>"
+    fi
   fi
 }
 
