@@ -5,7 +5,7 @@ tools I commonly use.
 
 ## Requirements
 
-- [`shell-fns v2.0.0`](https://github.com/Hdoc1509/shell-fns)
+- [`shell-fns`](https://github.com/Hdoc1509/shell-fns)
 - [`gitstatus`](https://github.com/romkatv/gitstatus)
 
 For Windows you will need [`scoop`](https://github.com/ScoopInstaller/Install#installation)
@@ -15,7 +15,7 @@ For Windows you will need [`scoop`](https://github.com/ScoopInstaller/Install#in
 This installation is supposed to run a fresh install of all the tools.
 
 ```bash
-git clone --depth=1 --single-branch --branch=v2.0.0 https://github.com/Hdoc1509/shell-fns.git ~/.shell-fns
+git clone --depth=1 https://github.com/Hdoc1509/shell-fns.git ~/.shell-fns
 git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/gitstatus
 
 git clone https://github.com/Hdoc1509/dotfiles.git ~/.dotfiles
