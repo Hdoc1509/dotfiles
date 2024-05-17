@@ -26,10 +26,6 @@ cd ~/.dotfiles
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.zshrc ~/.zshrc.bak
 
-# backup gh and git
-mv ~/.config/gh ~/.config/gh.bak
-mv ~/.config/git ~/.config/git.bak
-
 # install scripts
 ./install/windows.sh   # for Windows
 ./install/linux.sh     # for Ubuntu-based Linux distros
