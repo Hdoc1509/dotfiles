@@ -29,9 +29,6 @@ mv ~/.zshrc ~/.zshrc.bak
 # install scripts
 ./install/windows.sh   # for Windows
 ./install/linux.sh     # for Ubuntu-based Linux distros
-
-# restore gh auth file
-mv ~/.config/gh.bak/hosts.yml ~/.config/gh
 ```
 
 ## Windows
