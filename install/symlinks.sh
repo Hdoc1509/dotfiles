@@ -1,11 +1,5 @@
 info_log "Start installing symlinks..."
 
-# gh
-ln -s ~/.dotfiles/gh ~/.config/gh
-
-# git
-ln -s ~/.dofiles/git ~/.config/git
-
 # wezterm
 ln -s ~/.dotfiles/wezterm ~/.config/wezterm
 

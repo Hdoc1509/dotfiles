@@ -5,6 +5,8 @@ setup_git() {
   git config --global core.editor "nvim -u ~/.config/nvim/minimal.lua"
   git config --global core.symlinks true
   git config --global core.pager "less -+X --tabs=2"
+
+  touch ~/.config/git/git-prompt.sh
 }
 
 setup_github_cli() {
