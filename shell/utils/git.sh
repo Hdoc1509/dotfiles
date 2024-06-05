@@ -56,16 +56,13 @@ gtdi() {
 
 # Stage files interactively
 gai() {
-  local files
-  files=$(git status --short | sed '/^[AM] /d')
+  local files selected_files
+  files=$(git ls-files -m -o --exclude-standard)
 
   if [[ -z $files ]]; then
     echo "No files to stage"
   else
-    echo "${files}" |
-      __git_fzf_multi "Stage file(s)" |
-      awk '{ print $2 }' |
-      xargs -I {} git add '{}'
+    echo "${files}" | __git_fzf_multi "Stage file(s)" | xargs git add
   fi
 }
 
@@ -86,15 +83,14 @@ gshci() {
 
 # Show diff info interactively
 gdi() {
+  # NOTE: this can be shortened with:
+  # fzf --print0 -m --preview 'git diff {}'
   local files
-  files=$(git status --short | grep '.M')
+  files=$(git ls-files -m -o --exclude-standard)
 
   if [[ -z $files ]]; then
     echo "No files to show diff"
   else
-    echo "${files}" |
-      __git_fzf_multi "Show diff" |
-      awk '{ print $2 }' |
-      xargs -I {} git diff '{}'
+    echo "${files}" | __git_fzf_multi "Show diff(s)" | xargs git diff
   fi
 }
