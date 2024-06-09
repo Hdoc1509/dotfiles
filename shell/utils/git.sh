@@ -62,7 +62,8 @@ gai() {
   if [[ -z $files ]]; then
     echo "No files to stage"
   else
-    echo "${files}" | __git_fzf_multi "Stage file(s)" | xargs git add
+    echo "${files}" | __git_fzf_multi "Stage file(s)" |
+      xargs --no-run-if-empty git add
   fi
 }
 
@@ -91,6 +92,7 @@ gdi() {
   if [[ -z $files ]]; then
     echo "No files to show diff"
   else
-    echo "${files}" | __git_fzf_multi "Show diff(s)" | xargs git diff
+    echo "${files}" | __git_fzf_multi "Show diff(s)" |
+      xargs --no-run-if-empty git diff
   fi
 }
