@@ -1,7 +1,8 @@
 __git_root() { git rev-parse --show-toplevel; }
-__git_fzf() { fzf --height=20% --header="$1"; }
+__git_fzf() { fzf --height=20% --select-1 --header="$1"; }
 __git_fzf_multi() {
-  fzf --height=20% --multi --header="$1 | Press <Tab> for toggle selection"
+  fzf --height=20% --multi --select-1 \
+    --header="$1 | Press <Tab> for toggle selection"
 }
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
