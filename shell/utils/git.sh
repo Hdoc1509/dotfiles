@@ -1,3 +1,4 @@
+__git_root() { git rev-parse --show-toplevel; }
 __git_fzf() { fzf --height=20% --header="$1"; }
 __git_fzf_multi() {
   fzf --height=20% --multi --header="$1 | Press <Tab> for toggle selection"
@@ -56,8 +57,9 @@ gtdi() {
 
 # Stage files interactively
 gai() {
-  local files selected_files
-  files=$(git ls-files -m -o --exclude-standard)
+  local files git_root
+  git_root=$(__git_root)
+  files=$(git ls-files -m -o --exclude-standard "$git_root")
 
   if [[ -z $files ]]; then
     echo "No files to stage"
@@ -84,10 +86,9 @@ gshci() {
 
 # Show diff info interactively
 gdi() {
-  # NOTE: this can be shortened with:
-  # fzf --print0 -m --preview 'git diff {}'
-  local files
-  files=$(git ls-files -m -o --exclude-standard)
+  local files git_root
+  git_root=$(__git_root)
+  files=$(git ls-files --m -o --exclude-standard "$git_root")
 
   if [[ -z $files ]]; then
     echo "No files to show diff"
