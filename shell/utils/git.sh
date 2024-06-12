@@ -88,7 +88,7 @@ gshci() {
 gdi() {
   local files git_root
   git_root=$(__git_root)
-  files=$(git ls-files --m -o --exclude-standard "$git_root")
+  files=$(git ls-files --modified --exclude-standard "$git_root")
 
   if [[ -z $files ]]; then
     echo "No files to show diff"
