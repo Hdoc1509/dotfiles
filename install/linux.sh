@@ -8,12 +8,20 @@ source ~/.dotfiles/install/symlinks.sh
 success_log "Symlinks installed!"
 
 info_log "Installing apps..."
+# prepare apt repositories
 sudo add-apt-repository ppa:git-core/ppa
-curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
-echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+curl -fsSL https://apt.fury.io/wez/gpg.key |
+  sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' |
+  sudo tee /etc/apt/sources.list.d/wezterm.list
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
+  https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" |
+  sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat fd-find fzf git gh jq ripgrep shellcheck fonts-firacode xclip zsh
+sudo apt install build-essential bat brave-browser fd-find fzf git gh jq ripgrep shellcheck fonts-firacode xclip zsh
 
 if [[ ! -d ~/.local/bin ]]; then
   mkdir -p ~/.local/bin
