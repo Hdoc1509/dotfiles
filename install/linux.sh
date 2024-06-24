@@ -8,16 +8,25 @@ source ~/.dotfiles/install/symlinks.sh
 success_log "Symlinks installed!"
 
 info_log "Installing apps..."
-# prepare apt repositories
+# preparing apt repositories and keyrings
+# git
 sudo add-apt-repository ppa:git-core/ppa
+# wezterm
 curl -fsSL https://apt.fury.io/wez/gpg.key |
   sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
 echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' |
   sudo tee /etc/apt/sources.list.d/wezterm.list
+# brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
   https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" |
   sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+# github cli
+wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg |
+  sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
+sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" |
+  sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
 sudo apt update
 sudo apt upgrade -y
