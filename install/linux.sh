@@ -53,7 +53,7 @@ info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 info_log "Installing neovim..."
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
 chmod +x nvim.appimage
 mv nvim.appimage ~/.local/bin/nvim
 
