@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Simplenote
+# based on https://forums.simplenote.com/forums/topic/app-wont-open-in-linux-mint-21-1/#post-1972
+Exec=/opt/Simplenote/simplenote --disable-gpu-sandbox %U
+Terminal=false
+Type=Application
+Icon=simplenote
+StartupWMClass=Simplenote
+Comment=Simplenote is an easy way to keep notes, lists, ideas and more. Your notes stay in sync with all your devices for free.
+GenericName=Note Taking Application
+StartupNotify=true
+Categories=Utility;
+MimeType=x-scheme-handler/simplenote;

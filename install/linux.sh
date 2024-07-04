@@ -57,6 +57,18 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod +x nvim.appimage
 mv nvim.appimage ~/.local/bin/nvim
 
+info_log "Installing simplenote"
+curl -LO https://github.com/Automattic/simplenote-electron/releases/download/v2.21.0/Simplenote-linux-2.21.0-amd64.deb
+sudo dpkg -i Simplenote-linux-2.21.0-amd64.deb ||
+  warn_log "Failed to install simplenote with dpkg" &&
+  info_log "Forcing installation with apt..." &&
+  sudo apt install -f &&
+  sudo dpkg -i Simplenote-linux-2.21.0-amd64.deb
+sudo rm /usr/share/applications/simplenote.desktop
+cp \
+  ~/.dotfiles/simplenote/simplenote.desktop \
+  ~/.local/share/applications/simplenote.desktop
+
 info_log "Installing Node.js LTS..."
 nvm install --lts
 
