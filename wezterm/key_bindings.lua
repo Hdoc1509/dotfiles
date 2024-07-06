@@ -38,4 +38,20 @@ return {
       end),
     }),
   },
+
+  -- URL
+  {
+    key = "p",
+    mods = "CTRL",
+    action = act.QuickSelectArgs({
+      label = "open url",
+      patterns = {
+        "https?://\\S+",
+      },
+      action = act_cb(function(window, pane)
+        local url = window:get_selection_text_for_pane(pane)
+        wt.open_with(url)
+      end),
+    }),
+  },
 }
