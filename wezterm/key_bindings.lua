@@ -4,36 +4,28 @@ local act = wt.action
 local act_cb = wt.action_callback
 
 return {
-  -- Split horizontally
+  -- SPLITS
   {
     key = "v",
     mods = "CTRL|SHIFT",
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
-
-  -- Split vertically
   {
     key = "s",
     mods = "CTRL|SHIFT",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
 
-  -- Scroll up 1 line
+  -- SCROLL
   { key = "UpArrow", mods = "SHIFT", action = act.ScrollByLine(-1) },
-
-  -- Scroll down 1 line
   { key = "DownArrow", mods = "SHIFT", action = act.ScrollByLine(1) },
-
-  -- Scrool to bottom
   { key = "End", mods = "SHIFT", action = act.ScrollToBottom },
-
-  -- Scrool to top
   { key = "Home", mods = "SHIFT", action = act.ScrollToTop },
 
-  -- Toggle fullscreen
+  -- FULLSCREEN
   { key = "F11", action = act.ToggleFullScreen },
 
-  -- Change tab title
+  -- TABS
   {
     key = "e",
     mods = "CTRL|SHIFT",
