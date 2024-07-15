@@ -7,6 +7,7 @@ fzf
 gh
 git
 jq
+puddletag
 ripgrep
 shellcheck
 wezterm
