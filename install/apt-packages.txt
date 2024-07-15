@@ -1,0 +1,14 @@
+bat
+brave-browser
+build-essential
+fd-find
+fonts-firacode
+fzf
+gh
+git
+jq
+ripgrep
+shellcheck
+wezterm
+xclip
+zsh

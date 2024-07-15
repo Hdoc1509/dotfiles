@@ -30,7 +30,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubc
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install build-essential bat brave-browser fd-find fzf git gh jq ripgrep shellcheck fonts-firacode wezterm xclip zsh
+xargs sudo apt install -y <~/.dotfiles/install/apt-packages.txt
 
 if [[ ! -d ~/.local/bin ]]; then
   mkdir -p ~/.local/bin
