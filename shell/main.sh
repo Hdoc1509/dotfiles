@@ -34,6 +34,10 @@ else
   esac
   # pnpm end
 
+  # corepack
+  export COREPACK_ENABLE_AUTO_PIN=0
+  # corepack end
+
   # NOTE: prevent weird background on folders of mounted drives
   #   issue: https://github.com/lsd-rs/lsd/issues/671
   # related:
