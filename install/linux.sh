@@ -87,15 +87,6 @@ pnpm_restore_global
 # set timedate to local
 sudo timedatectl set-local-rtc 1
 
-info_log "Installing firefox developer edition"
-wget "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US" \
-  -O /tmp/firefox-developer-edition.tar.bz2
-sudo tar xjf /tmp/firefox-developer-edition.tar.bz2 \
-  -C /opt/firefox-dev --strip-components=1
-cp \
-  ~/.dotfiles/firefox/developer-edition.desktop \
-  ~/.local/share/applications/firefox-dev.desktop
-
 info_log "Installing watchOS theme..."
 git clone https://github.com/Hdoc1509/watchOS ~/.themes/watchOS
 
