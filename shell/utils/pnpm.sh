@@ -7,7 +7,7 @@ pnpm_backup_global() {
   jq -r '.dependencies | keys_unsorted[]' "$PNPM_GLOBAL_PACKAGE_JSON" >"$PNPM_GLOBAL_BACKUP" &&
     echo "${LIGHTGREEN}PNPM global backup done successfullly${NOCOLOR}" &&
     echo "${LIGHTGREEN}The following packages were backuped:${NOCOLOR}" &&
-    /usr/bin/cat "$PNPM_GLOBAL_BACKUP"
+    cat "$PNPM_GLOBAL_BACKUP"
 }
 
 pnpm_restore_global() {

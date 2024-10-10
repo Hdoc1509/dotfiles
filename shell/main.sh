@@ -13,11 +13,9 @@ export EDITOR=nvim
 if is_msys_env; then
   # Enable Symlink on git-bash and msys environment
   export MSYS=winsymlinks:nativestrict
-
-  alias cat='bat'
 else
   # options for ubuntu-based systems
-  alias cat='batcat'
+  alias bat='batcat'
   alias fd='fdfind'
 
   # nvm

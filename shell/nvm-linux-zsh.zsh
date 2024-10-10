@@ -7,7 +7,7 @@ load-nvmrc() {
 
   if [ -n "$nvmrc_path" ]; then
     local nvmrc_node_version
-    nvmrc_node_version=$(nvm version "$(/usr/bin/cat "${nvmrc_path}")")
+    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install

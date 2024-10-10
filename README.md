@@ -46,9 +46,7 @@ run the following command:
 ```bash
 cd ~/.dotfiles
 
-# for prevent calling batcat instead of built-in cat
-# ↓ ↓ ↓ ↓ ↓
-/usr/bin/cat shell/.profile >> ~/.profile
+cat shell/.profile >> ~/.profile
 
 # then execute ./shell/.profile
 ./shell/.profile
