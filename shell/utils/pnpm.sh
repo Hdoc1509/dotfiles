@@ -24,7 +24,7 @@ pnpm_restore_global() {
 pnUi() {
   local packages
   packages=$(
-    jq -r '.dependencies,.devDependencies|keys[]' package.json |
+    jq -r '.dependencies,.devDependencies|iterables|keys[]' package.json |
       fzf --height=20% --multi |
       tr '\n' ' '
   )
