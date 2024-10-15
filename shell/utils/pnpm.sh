@@ -23,11 +23,7 @@ pnpm_restore_global() {
 # uninstall packages interactively
 pnUi() {
   local packages
-  packages=$(
-    jq -r '.dependencies,.devDependencies|iterables|keys[]' package.json |
-      fzf --height=20% --multi |
-      tr '\n' ' '
-  )
+  packages=$(get_package_json_deps)
 
   if [[ -z $packages ]]; then
     echo "No packages selected"

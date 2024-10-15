@@ -71,6 +71,7 @@ source ~/.dotfiles/fzf/fzf-options.sh
 
 source "$SHELL_UTILS"/git.sh
 source "$SHELL_UTILS"/nvim.sh
+source "$SHELL_UTILS"/node_package.sh
 source "$SHELL_UTILS"/pnpm.sh
 source ~/.dotfiles/shell/games.sh
 
