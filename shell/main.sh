@@ -71,7 +71,9 @@ source ~/.dotfiles/fzf/fzf-options.sh
 
 source "$SHELL_UTILS"/git.sh
 source "$SHELL_UTILS"/nvim.sh
+# be sure to load before npm and pnpm utils
 source "$SHELL_UTILS"/node_package.sh
+source "$SHELL_UTILS"/npm.sh
 source "$SHELL_UTILS"/pnpm.sh
 source ~/.dotfiles/shell/games.sh
 
