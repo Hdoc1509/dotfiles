@@ -27,6 +27,13 @@ wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg |
 sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" |
   sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
+# cloudflare warp
+# https://pkg.cloudflareclient.com/
+# -- set corrent version name when updating
+curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |
+  sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ jammy main" |
+  sudo tee /etc/apt/sources.list.d/cloudflare-client.list
 
 sudo apt update
 sudo apt upgrade -y
