@@ -12,8 +12,6 @@ cdi() {
   )" || return
 }
 
-# TODO: Add options
-#   Follow https://www.redhat.com/sysadmin/arguments-options-bash-scripts
 echolor() {
   if [[ -z $1 ]]; then
     echo "Usage: echolor <text> [color] [background]"
