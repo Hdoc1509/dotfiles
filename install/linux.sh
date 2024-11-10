@@ -46,6 +46,11 @@ fi
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
 
+info_log "Installing bat..."
+curl -LO https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
+sudo dpkg -i bat-musl_0.24.0_amd64.deb
+rm bat-musl_0.24.0_amd64.deb
+
 info_log "Installing lsd..."
 sudo apt install lsd ||
   warn_log "Failed to install lsd with apt" &&

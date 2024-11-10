@@ -15,7 +15,6 @@ if is_msys_env; then
   export MSYS=winsymlinks:nativestrict
 else
   # options for ubuntu-based systems
-  alias bat='batcat'
   alias fd='fdfind'
 
   # nvm
