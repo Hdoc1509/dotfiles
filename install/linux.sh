@@ -110,6 +110,9 @@ info_log "Removing redshift-gtk for avoid conflicts"
 sudo apt remove redshift-gtk
 info_log "Enable the qredshift applet with Applets manager"
 
+info_log "Installing sdkman"
+curl -s "https://get.sdkman.io" | bash
+
 info_log "Setting up git config"
 setup_git
 
