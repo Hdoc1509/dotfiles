@@ -52,12 +52,11 @@ sudo dpkg -i bat-musl_0.24.0_amd64.deb
 rm bat-musl_0.24.0_amd64.deb
 
 info_log "Installing lsd..."
-sudo apt install lsd ||
-  warn_log "Failed to install lsd with apt" &&
-  info_log "Trying to install lsd with wget..." &&
-  wget -q \
-    https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-musl_1.0.0_amd64.deb \
-    -O /tmp/lsd-install.deb &&
+_lsd_verion=1.1.5
+_lsd_deb="lsd_${_lsd_verion}_amd64.deb"
+wget -q \
+  https://github.com/lsd-rs/lsd/releases/download/v"$_lsd_verion"/"$_lsd_deb" \
+  -O /tmp/lsd-install.deb &&
   sudo dpkg -i /tmp/lsd-install.deb &>/dev/null &&
   rm /tmp/lsd-install.deb
 
