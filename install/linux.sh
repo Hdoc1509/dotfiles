@@ -112,6 +112,16 @@ info_log "Enable the qredshift applet with Applets manager"
 
 info_log "Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
+# TODO: install jdk17 and jkd21 from adoptium-temurin
+
+info_log "Installing delta pager"
+_delta_version=0.18.2
+_delta_deb="git-delta_${_delta_version}_amd64.deb"
+wget -q \
+  https://github.com/dandavison/delta/releases/download/"$_delta_version"/"$_delta_deb" \
+  -O /tmp/delta-install.deb &&
+  sudo dpkg -i /tmp/delta-install.deb &>/dev/null &&
+  rm /tmp/delta-install.deb
 
 info_log "Setting up git config"
 setup_git
