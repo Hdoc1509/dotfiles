@@ -1,5 +1,19 @@
 # DIRECTORIES
+
+## BUILD
 dist
+build
+bin
+
+## JAVA
+.settings
+.project
+.classpath
+.factorypath
+eclipse
+.gradle
+
+## OTHER
 node_modules
 .git
 .netlify
