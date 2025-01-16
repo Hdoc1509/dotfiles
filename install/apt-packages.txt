@@ -1,7 +1,6 @@
 brave-browser
 build-essential
 fd-find
-fonts-firacode
 fzf
 gh
 git

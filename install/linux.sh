@@ -134,4 +134,17 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+info_log "Installing FiraCode Nerd Font"
+NERD_FONTS_VERSION=3.3.0
+curl -Lo firacode-nf.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v$NERD_FONTS_VERSION/FiraCode.zip" &&
+  unzip firacode-nf.zip tmp-firacode-nf
+
+if [[ ! -d ~/.local/share/fonts ]]; then
+  mkdir -p ~/.local/share/fonts
+fi
+
+mv tmp-firacode-nf/*Font-*.ttf ~/.local/share/fonts
+rm -rf tmp-firacode-nf
+sudo fc-cache --force --verbose
+
 installation_complete_log

@@ -15,6 +15,10 @@ ln -s ~/.dotfiles/mintty/.minttyrc "$HOME"/.minttyrc
 
 success_log "Symlinks installed!"
 
+# TODO: add FiraCode Nerd Font
+# scoop bucket add nerd-fonts
+# scoop install nerd-fonts/FiraCode-NF
+# or try https://github.com/msys2/MINGW-packages/discussions/18195
 info_log "Installing scoop apps..."
 scoop import ~/.dotfiles/scoop/backup.json
 
