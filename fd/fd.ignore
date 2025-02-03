@@ -1,6 +1,6 @@
 # DIRECTORIES
 
-## BUILD
+# BUILD
 dist
 build
 bin
@@ -21,7 +21,7 @@ eclipse
 out
 .idea
 
-## OTHER
+# OTHER
 node_modules
 .git
 .netlify
