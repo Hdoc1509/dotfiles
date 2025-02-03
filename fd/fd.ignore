@@ -17,6 +17,10 @@ eclipse
 .gradle
 .factorypath
 
+# INTELLIJ IDEA
+out
+.idea
+
 ## OTHER
 node_modules
 .git
