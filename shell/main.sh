@@ -16,6 +16,7 @@ if is_msys_env; then
 else
   # options for ubuntu-based systems
   alias fd='fdfind'
+  alias nemo='nemo --existing-window'
 
   # nvm
   export NVM_DIR="$HOME/.nvm"
