@@ -5,13 +5,17 @@ dist
 build
 bin
 
-## JAVA
-.settings
-.project
-.classpath
-.factorypath
+# ECLIPSE
 eclipse
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# GRADLE
 .gradle
+.factorypath
 
 ## OTHER
 node_modules
