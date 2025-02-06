@@ -25,6 +25,7 @@ out
 node_modules
 .git
 .netlify
+backup
 
 # FILES
 *.exe
