@@ -52,4 +52,5 @@ function my_set_prompt() {
 }
 
 gitstatus_stop 'MY' && gitstatus_start -s 99 -u 99 -c 99 -d 99 'MY'
-precmd_functions+=(my_set_prompt)
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd my_set_prompt
