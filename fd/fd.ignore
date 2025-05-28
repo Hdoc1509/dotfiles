@@ -63,5 +63,6 @@ backup
 *.aac
 *.lnk
 *.jar
+*.webp
 package-lock.json
 pnpm-lock.yaml
