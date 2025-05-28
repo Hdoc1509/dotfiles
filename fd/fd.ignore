@@ -21,6 +21,10 @@ eclipse
 out
 .idea
 
+## PLAYWRIGHT
+playwright-report
+test-results
+
 ## OTHER
 node_modules
 .git
