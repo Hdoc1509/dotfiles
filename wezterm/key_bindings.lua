@@ -54,4 +54,16 @@ return {
       end),
     }),
   },
+
+  -- PANES
+  {
+    key = "s",
+    mods = "CTRL",
+    action = act.PaneSelect({ mode = "SwapWithActive" }),
+  },
+  {
+    key = "s",
+    mods = "CTRL | ALT",
+    action = act.PaneSelect({ mode = "MoveToNewTab" }),
+  },
 }
