@@ -46,7 +46,7 @@ return {
     action = act.QuickSelectArgs({
       label = "open url",
       patterns = {
-        "https?://[^\\s)\"]+",
+        'https?://[^\\s)"]+',
       },
       action = act_cb(function(window, pane)
         local url = window:get_selection_text_for_pane(pane)
