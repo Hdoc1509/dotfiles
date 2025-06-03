@@ -1,8 +1,12 @@
+local COLORS = {
+  white = "#e8e8e8",
+}
+
 return {
   cursor_bg = "#01b8ff",
   cursor_border = "#01b8ff",
   background = "#000000",
-  foreground = "#ffffff",
+  foreground = COLORS.white,
   ansi = {
     "#000000", -- black
     "#fe0100", -- red
@@ -11,7 +15,7 @@ return {
     "#0066ff", -- blue
     "#cc00ff", -- magenta
     "#00d5d5", -- cyan
-    "#ffffff", -- white
+    COLORS.white, -- white
   },
   brights = {
     "#808080", -- bright-black
@@ -21,7 +25,7 @@ return {
     "#0066ff", -- bright-blue
     "#cc00ff", -- bright-magenta
     "#00d5d5", -- bright-cyan
-    "#ffffff", -- bright-white
+    COLORS.white, -- bright-white
   },
   split = "#01b8ff",
 }
