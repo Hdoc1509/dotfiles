@@ -58,7 +58,7 @@ return {
   -- PANES
   {
     key = "s",
-    mods = "CTRL",
+    mods = "ALT",
     action = act.PaneSelect({ mode = "SwapWithActive" }),
   },
   {
