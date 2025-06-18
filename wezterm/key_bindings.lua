@@ -25,20 +25,6 @@ return {
   -- FULLSCREEN
   { key = "F11", action = act.ToggleFullScreen },
 
-  -- TABS
-  {
-    key = "e",
-    mods = "CTRL|SHIFT",
-    action = act.PromptInputLine({
-      description = "Enter new name for tab",
-      action = act_cb(function(window, _, line)
-        if line then
-          window:active_tab():set_title(line)
-        end
-      end),
-    }),
-  },
-
   -- URL
   {
     key = "p",
