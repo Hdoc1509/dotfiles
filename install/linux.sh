@@ -29,7 +29,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubc
   sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 # cloudflare warp
 # https://pkg.cloudflareclient.com/
-# -- set corrent version name when updating
+# -- set correct version name when updating
 curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |
   sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ jammy main" |
@@ -52,10 +52,10 @@ sudo dpkg -i bat-musl_0.24.0_amd64.deb
 rm bat-musl_0.24.0_amd64.deb
 
 info_log "Installing lsd..."
-_lsd_verion=1.1.5
-_lsd_deb="lsd_${_lsd_verion}_amd64.deb"
+_lsd_version=1.1.5
+_lsd_deb="lsd_${_lsd_version}_amd64.deb"
 wget -q \
-  https://github.com/lsd-rs/lsd/releases/download/v"$_lsd_verion"/"$_lsd_deb" \
+  https://github.com/lsd-rs/lsd/releases/download/v"$_lsd_version"/"$_lsd_deb" \
   -O /tmp/lsd-install.deb &&
   sudo dpkg -i /tmp/lsd-install.deb &>/dev/null &&
   rm /tmp/lsd-install.deb
@@ -111,7 +111,7 @@ info_log "Enable the qredshift applet with Applets manager"
 
 info_log "Installing sdkman"
 curl -s "https://get.sdkman.io" | bash
-# TODO: install jdk17 and jkd21 from adoptium-temurin
+# TODO: install jdk17 and jdk21 from adoptium-temurin
 
 info_log "Installing delta pager"
 _delta_version=0.18.2
