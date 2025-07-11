@@ -30,6 +30,7 @@ node_modules
 .git
 .netlify
 backup
+.wireit
 
 # FILES
 *.exe
