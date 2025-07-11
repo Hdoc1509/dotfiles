@@ -1,11 +1,11 @@
-# DIRECTORIES
+## DIRECTORIES
 
-## BUILD
+### BUILD
 dist
 build
 bin
 
-## ECLIPSE
+### ECLIPSE
 eclipse
 *.launch
 .settings
@@ -13,26 +13,26 @@ eclipse
 .classpath
 .project
 
-## GRADLE
+### GRADLE
 .gradle
 .factorypath
 
-## INTELLIJ IDEA
+### INTELLIJ IDEA
 out
 .idea
 
-## PLAYWRIGHT
+### PLAYWRIGHT
 playwright-report
 test-results
 
-## OTHER
+### OTHER
 node_modules
 .git
 .netlify
 backup
 .wireit
 
-# FILES
+## FILES
 *.exe
 *.dll
 *.so
