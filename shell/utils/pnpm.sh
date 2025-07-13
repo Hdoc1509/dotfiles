@@ -1,4 +1,5 @@
 PNPM_GLOBAL_BACKUP=~/.dotfiles/install/global-packages.txt
+
 if pnpm &>/dev/null; then
   PNPM_GLOBAL_PACKAGE_JSON="$(dirname "$(pnpm root --global)")/package.json"
 fi
@@ -7,7 +8,7 @@ fi
 pnpm_backup_global() {
   #TODO: Test in linux
   jq -r '.dependencies | keys_unsorted[]' "$PNPM_GLOBAL_PACKAGE_JSON" >"$PNPM_GLOBAL_BACKUP" &&
-    echo "${LIGHTGREEN}PNPM global backup done successfullly${NOCOLOR}" &&
+    echo "${LIGHTGREEN}PNPM global backup done successfully${NOCOLOR}" &&
     echo "${LIGHTGREEN}The following packages were backuped:${NOCOLOR}" &&
     cat "$PNPM_GLOBAL_BACKUP"
 }
