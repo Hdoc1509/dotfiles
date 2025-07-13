@@ -9,3 +9,15 @@ npUi() {
     echo "${packages}" | xargs npm uninstall
   fi
 }
+
+# run script interactively
+npRi() {
+  local script
+  script=$(get_package_json_scripts)
+
+  if [[ -z $script ]]; then
+    echo "No script selected"
+  else
+    npm run "$script"
+  fi
+}
