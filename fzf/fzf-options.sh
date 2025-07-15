@@ -1,5 +1,5 @@
-FZF_DEFAULT_COMMAND=$(tr '\n' ' ' <~/.dotfiles/fzf/command.conf)
+FZF_DEFAULT_COMMAND=$(tail --lines=+2 ~/.dotfiles/fzf/command.conf | tr '\n' ' ')
 export FZF_DEFAULT_COMMAND
 
-FZF_DEFAULT_OPTS=$(tr '\n' ' ' <~/.dotfiles/fzf/options.conf)
+FZF_DEFAULT_OPTS=$(tail --lines=+2 ~/.dotfiles/fzf/options.conf | tr '\n' ' ')
 export FZF_DEFAULT_OPTS
