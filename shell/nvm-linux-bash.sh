@@ -17,7 +17,7 @@ cdnvm() {
 
     # If the current version is not the default version, set it to use the default version
     if [ "$(nvm current)" != "${default_version}" ]; then
-      nvm use default --silent
+      nvm use default
     fi
   elif [[ -s "${nvm_path}/.nvmrc" && -r "${nvm_path}/.nvmrc" ]]; then
     declare nvm_version
@@ -35,7 +35,7 @@ cdnvm() {
     if [ "${locally_resolved_nvm_version}" = 'N/A' ]; then
       nvm install "${nvm_version}"
     elif [ "$(nvm current)" != "${locally_resolved_nvm_version}" ]; then
-      nvm use "${nvm_version}" --silent
+      nvm use "${nvm_version}"
     fi
   fi
 }

@@ -12,11 +12,11 @@ load-nvmrc() {
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
     elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use --silent
+      nvm use
     fi
   elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
     echo "Reverting to nvm default version"
-    nvm use --silent default
+    nvm use default
   fi
 }
 
