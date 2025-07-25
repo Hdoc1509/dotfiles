@@ -5,6 +5,6 @@ nvf() {
   if [[ -z $files ]]; then
     echo "No files selected"
   else
-    echo "${files}" | tr '\n' ' ' | xargs nvim -p
+    echo "${files}" | tr '\n' ' ' | xargs nvim
   fi
 }
