@@ -28,7 +28,7 @@ function my_set_prompt() {
   p+="${CLOSE_PROMPT}"
 
   if ((LAST_STATUS_CODE == 0)); then
-    p+="${STATUS_SUCCES_COLOR}"
+    p+="${STATUS_SUCCESS_COLOR}"
   else
     p+="${STATUS_ERROR_COLOR}"
   fi

@@ -27,7 +27,7 @@ GIT_BEHIND_COLOR=$(set_prompt_color 1 -)
 GIT_CONFLICTS_COLOR=$(set_prompt_color 91 -)
 GIT_STATUS_PREFIX="${MODULE_SEPARATOR}"
 
-STATUS_SUCCES_COLOR=$(set_prompt_color 10 -)
+STATUS_SUCCESS_COLOR=$(set_prompt_color 10 -)
 STATUS_ERROR_COLOR=$(set_prompt_color 1 -)
 
 if is_zsh; then
