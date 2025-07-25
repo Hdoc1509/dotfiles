@@ -17,7 +17,7 @@ source ~/gitstatus/gitstatus.plugin.zsh
 
 function my_set_prompt() {
   local LAST_STATUS_CODE=$?
-	local p
+  local p
 
   p="${RESET_COLOR}$(get_virtualenv_prompt)${DIRECTORY}"
 
@@ -37,8 +37,8 @@ function my_set_prompt() {
 
   PS1="${p}"
 
-	# SETTING TERMINAL TITLE
-	term_title
+  # SETTING TERMINAL TITLE
+  term_title
   # Wezterm: same working dir for splits and new tabs
   # See:
   #   https://wezfurlong.org/wezterm/shell-integration.html#osc-7-escape-sequence-to-set-the-working-directory
