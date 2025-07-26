@@ -14,8 +14,17 @@ __git_fzf_multi() {
 }
 
 __git_fzf_preview() {
+  if [[ -z $1 || -z $2 ]]; then
+    echo "Usage: __git_fzf_preview <header> <preview-command> [fzf-options]"
+    return 1
+  fi
+
+  local header="$1"
+  local preview_command="$2"
   local position=right
   local preview_size=70%
+
+  shift 2
 
   if [[ $COLUMNS -lt 100 ]]; then
     position=down
@@ -29,7 +38,8 @@ __git_fzf_preview() {
 
   __git_fzf "$header | Press <Tab> for toggle selection" \
     --bind="enter:abort" \
-    --preview="$preview_command" --preview-window="$position,$preview_size"
+    --preview="$preview_command" --preview-window="$position,$preview_size" \
+    "$@"
 }
 __git_fzf_multi_preview() {
   local position=right
