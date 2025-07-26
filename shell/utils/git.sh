@@ -19,11 +19,12 @@ __git_fzf_preview() {
 
   if [[ $COLUMNS -lt 100 ]]; then
     position=down
+
+    if [[ $LINES -lt 30 ]]; then
+      preview_size=$((LINES - 8))
+    fi
   else
-    preview_size=50
-  fi
-  if [[ $LINES -lt 30 ]]; then
-    preview_size=$((LINES - 8))
+    preview_size=50%
   fi
 
   fzf --select-1 \
