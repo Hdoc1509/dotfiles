@@ -1,6 +1,6 @@
 __git_root() { git rev-parse --show-toplevel; }
 __git_fzf() {
-  [[ -z $1 ]] && echo "Usage: __git_fzf <header>" && return 1
+  [[ -z $1 ]] && echo "Usage: __git_fzf <header> <fzf-options>" && return 1
   local header="$1"
   shift
   fzf --select-1 --header="$header" "$*"
@@ -24,7 +24,7 @@ __git_fzf_preview() {
     --preview="$2" --preview-window="$position,$preview_size"
 }
 __git_fzf_multi() {
-  [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header>" && return 1
+  [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header> <fzf-options>" && return 1
   __git_fzf "$1 | Press <Tab> for toggle selection" --multi
 }
 __git_fzf_multi_preview() {
