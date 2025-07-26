@@ -3,6 +3,24 @@ __git_fzf() { fzf --select-1 --header="$1"; }
 __git_fzf_multi() {
   fzf --multi --select-1 --header="$1 | Press <Tab> for toggle selection"
 }
+__git_fzf_multi_preview() {
+  local position=right
+  local preview_size=70
+
+  # TODO: try to use FZF_PREVIEW_[COLUMNS|LINES]
+
+  if [[ $COLUMNS -lt 100 ]]; then
+    position=down
+  else
+    preview_size=50
+  fi
+  if [[ $LINES -lt 30 ]]; then
+    preview_size=50
+  fi
+
+  fzf --multi --select-1 \
+    --header="$1 | Press <Tab> for toggle selection" \
+    --preview="$2" --preview-window="$position,$preview_size%"
 }
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
@@ -64,7 +82,10 @@ gai() {
   if [[ -z $files ]]; then
     echo "No files to stage"
   else
-    echo "${files}" | __git_fzf_multi "Stage file(s)" |
+    echo "${files}" |
+      __git_fzf_multi_preview \
+        "Stage file(s)" \
+        "git diff {} | delta --file-style='omit'" |
       xargs --no-run-if-empty git add
   fi
 }
@@ -84,15 +105,4 @@ gshci() {
   echo "${commits}" | __git_fzf | awk '{ print $1}' | xargs -I {} git show '{}'
 }
 
-# Show diff info interactively
-gdi() {
-  local files
-  files=$(git ls-files --modified --exclude-standard "$(__git_root)")
-
-  if [[ -z $files ]]; then
-    echo "No files to show diff"
-  else
-    echo "${files}" | __git_fzf_multi "Show diff(s)" |
-      xargs --no-run-if-empty git diff
-  fi
 }
