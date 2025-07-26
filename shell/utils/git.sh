@@ -1,44 +1,4 @@
 __git_root() { git rev-parse --show-toplevel; }
-
-# `$1`: Header of the fzf window
-# `$@`: Options for fzf
-__git_fzf() {
-  [[ -z $1 ]] && echo "Usage: __git_fzf <header> [fzf-options]" && return 1
-  local header="$1"
-  shift
-  fzf --header="$header" "$@"
-}
-
-# `$1`: Header of the fzf window
-# `$2`: Preview command
-# `$@`: Options for fzf
-__git_fzf_preview() {
-  if [[ -z $1 || -z $2 ]]; then
-    echo "Usage: __git_fzf_preview <header> <preview-command> [fzf-options]"
-    return 1
-  fi
-
-  local header="$1"
-  local preview_command="$2"
-  local position=right
-  local preview_size=50%
-
-  shift 2
-
-  if [[ $COLUMNS -lt 100 ]]; then
-    position=down
-
-    if [[ $LINES -lt 30 ]]; then
-      preview_size=$((LINES - 8))
-    fi
-  fi
-
-  __git_fzf "$header | Press <Tab> for toggle selection" \
-    --bind="enter:abort" \
-    --preview="$preview_command" --preview-window="$position,$preview_size" \
-    "$@"
-}
-
 git_get_branches() { git branch --format='%(refname:short)'; }
 git_get_current_branch() { git branch --show-current; }
 
@@ -50,9 +10,7 @@ gswi() {
   if [[ $branches == $(git_get_current_branch) || -z $branches ]]; then
     echo "No branches to switch to"
   else
-    echo "${branches}" |
-      __git_fzf 'Switch to branch' |
-      xargs -I {} git switch '{}'
+    echo "${branches}" | __fzf 'Switch to branch' | xargs -I {} git switch '{}'
   fi
 }
 
@@ -65,8 +23,7 @@ gbdi() {
     echo "No branches to delete"
   else
     echo "${branches}" |
-      __git_fzf "Delete branch(s)" --multi |
-      xargs -I {} git branch --delete '{}'
+      __fzf "Delete branch(s)" --multi | xargs -I {} git branch --delete '{}'
 
     new_branches=$(git_get_branches)
 
@@ -86,8 +43,7 @@ gtdi() {
     echo "No tags to delete"
   else
     echo "${tags}" |
-      __git_fzf "Delete tag(s)" --multi |
-      xargs -I {} git tag --delete '{}'
+      __fzf "Delete tag(s)" --multi | xargs -I {} git tag --delete '{}'
   fi
 }
 
@@ -100,10 +56,8 @@ gai() {
     echo "No files to stage"
   else
     echo "${files}" |
-      __git_fzf_preview \
-        "Stage file(s)" \
-        "git diff {} | delta --file-style='omit'" \
-        --multi |
+      __fzf_preview \
+        "Stage file(s)" "git diff {} | delta --file-style='omit'" --multi |
       xargs --no-run-if-empty git add
   fi
 }
@@ -121,7 +75,6 @@ gshci() {
   fi
 
   echo "${commits}" |
-    __git_fzf_preview \
-      "See commit changes" \
-      "awk '{ print \$1 }' <<< {} | xargs git show | delta"
+    __fzf_preview \
+      "See commit changes" "awk '{ print \$1 }' <<< {} | xargs git show | delta"
 }

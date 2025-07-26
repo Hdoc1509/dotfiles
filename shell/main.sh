@@ -69,6 +69,7 @@ source ~/.dotfiles/fzf/fzf-options.sh
 # count git commits
 # git rev-list --count master|HEAD
 
+source "$SHELL_UTILS"/fzf.sh
 source "$SHELL_UTILS"/git.sh
 source "$SHELL_UTILS"/nvim.sh
 # NOTE: be sure to load node_package.sh before npm and pnpm utils
