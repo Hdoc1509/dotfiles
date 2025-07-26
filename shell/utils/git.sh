@@ -15,6 +15,7 @@ __git_fzf_preview() {
 
   fzf --select-1 \
     --header="$1 | Press <Tab> for toggle selection" \
+    --bind="enter:abort" \
     --preview="$2" --preview-window="$position,$preview_size"
 }
 __git_fzf_multi() {
