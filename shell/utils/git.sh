@@ -1,5 +1,7 @@
 __git_root() { git rev-parse --show-toplevel; }
 
+# `$1`: Header of the fzf window
+# `$@`: Options for fzf
 __git_fzf() {
   [[ -z $1 ]] && echo "Usage: __git_fzf <header> [fzf-options]" && return 1
   local header="$1"
@@ -7,6 +9,9 @@ __git_fzf() {
   fzf --header="$header" "$@"
 }
 
+# `$1`: Header of the fzf window
+# `$2`: Preview command
+# `$@`: Options for fzf
 __git_fzf_preview() {
   if [[ -z $1 || -z $2 ]]; then
     echo "Usage: __git_fzf_preview <header> <preview-command> [fzf-options]"
