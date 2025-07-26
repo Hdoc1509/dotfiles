@@ -27,10 +27,9 @@ __git_fzf_preview() {
     preview_size=50%
   fi
 
-  fzf --select-1 \
-    --header="$1 | Press <Tab> for toggle selection" \
+  __git_fzf "$header | Press <Tab> for toggle selection" \
     --bind="enter:abort" \
-    --preview="$2" --preview-window="$position,$preview_size"
+    --preview="$preview_command" --preview-window="$position,$preview_size"
 }
 __git_fzf_multi_preview() {
   local position=right
