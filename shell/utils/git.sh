@@ -4,7 +4,7 @@ __git_fzf() {
   [[ -z $1 ]] && echo "Usage: __git_fzf <header> <fzf-options>" && return 1
   local header="$1"
   shift
-  fzf --select-1 --header="$header" "$*"
+  fzf --select-1 --header="$header" "$@"
 }
 __git_fzf_multi() {
   [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header> <fzf-options>" && return 1
