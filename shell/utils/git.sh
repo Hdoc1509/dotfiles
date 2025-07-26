@@ -2,9 +2,7 @@ __git_root() { git rev-parse --show-toplevel; }
 __git_fzf() { fzf --select-1 --header="$1"; }
 __git_fzf_preview() {
   local position=right
-  local preview_size=70
-
-  # TODO: try to use FZF_PREVIEW_[COLUMNS|LINES]
+  local preview_size=70%
 
   if [[ $COLUMNS -lt 100 ]]; then
     position=down
@@ -12,12 +10,12 @@ __git_fzf_preview() {
     preview_size=50
   fi
   if [[ $LINES -lt 30 ]]; then
-    preview_size=50
+    preview_size=$((LINES - 8))
   fi
 
   fzf --select-1 \
     --header="$1 | Press <Tab> for toggle selection" \
-    --preview="$2" --preview-window="$position,$preview_size%"
+    --preview="$2" --preview-window="$position,$preview_size"
 }
 __git_fzf_multi() {
   fzf --multi --select-1 --header="$1 | Press <Tab> for toggle selection"
