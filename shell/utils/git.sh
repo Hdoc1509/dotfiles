@@ -8,7 +8,9 @@ __git_fzf() {
 }
 __git_fzf_multi() {
   [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header> <fzf-options>" && return 1
-  __git_fzf "$1 | Press <Tab> for toggle selection" --multi
+  local header="$1"
+  shift
+  __git_fzf "$header | Press <Tab> for toggle selection" --multi "$*"
 }
 
 __git_fzf_preview() {
@@ -28,10 +30,6 @@ __git_fzf_preview() {
     --header="$1 | Press <Tab> for toggle selection" \
     --bind="enter:abort" \
     --preview="$2" --preview-window="$position,$preview_size"
-}
-__git_fzf_multi() {
-  [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header> <fzf-options>" && return 1
-  __git_fzf "$1 | Press <Tab> for toggle selection" --multi
 }
 __git_fzf_multi_preview() {
   local position=right
