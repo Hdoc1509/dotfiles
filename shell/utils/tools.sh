@@ -4,6 +4,8 @@ is_mintty_term() { [[ "$TERM_PROGRAM" == 'mintty' ]]; }
 
 term_title() { echo -ne "\033]0; ${PWD##*/} @ ${HOSTNAME:-$USER}\007"; }
 
+man() { nvim +"Man $1" +only +"set laststatus=0"; }
+
 mkcd() { mkdir -p "$1" && cd "$1" || return; }
 cdi() {
   cd "$(
