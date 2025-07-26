@@ -6,12 +6,6 @@ __git_fzf() {
   shift
   fzf --select-1 --header="$header" "$@"
 }
-__git_fzf_multi() {
-  [[ -z $1 ]] && echo "Usage: __git_fzf_multi <header> [fzf-options]" && return 1
-  local header="$1"
-  shift
-  __git_fzf "$header | Press <Tab> for toggle selection" --multi "$*"
-}
 
 __git_fzf_preview() {
   if [[ -z $1 || -z $2 ]]; then
@@ -84,7 +78,7 @@ gbdi() {
     echo "No branches to delete"
   else
     echo "${branches}" |
-      __git_fzf_multi "Delete branch(s)" |
+      __git_fzf "Delete branch(s)" --multi |
       xargs -I {} git branch --delete '{}'
 
     new_branches=$(git_get_branches)
@@ -105,7 +99,7 @@ gtdi() {
     echo "No tags to delete"
   else
     echo "${tags}" |
-      __git_fzf_multi "Delete tag(s)" |
+      __git_fzf "Delete tag(s)" --multi |
       xargs -I {} git tag --delete '{}'
   fi
 }
