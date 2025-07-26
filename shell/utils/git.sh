@@ -133,6 +133,5 @@ gshci() {
   echo "${commits}" |
     __git_fzf_preview \
       "See commit changes" \
-      "awk '{ print \$1 }' <<< {} | xargs git show | delta" |
-    awk '{ print $1}' | xargs -I {} git show '{}'
+      "awk '{ print \$1 }' <<< {} | xargs git show | delta"
 }
