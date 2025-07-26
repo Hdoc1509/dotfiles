@@ -22,7 +22,7 @@ __git_fzf_preview() {
   local header="$1"
   local preview_command="$2"
   local position=right
-  local preview_size=70%
+  local preview_size=50%
 
   shift 2
 
@@ -32,8 +32,6 @@ __git_fzf_preview() {
     if [[ $LINES -lt 30 ]]; then
       preview_size=$((LINES - 8))
     fi
-  else
-    preview_size=50%
   fi
 
   __git_fzf "$header | Press <Tab> for toggle selection" \
