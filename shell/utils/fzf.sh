@@ -4,6 +4,11 @@ __fzf() {
   [[ -z $1 ]] && echo "Usage: __fzf <header> [fzf-options]" && return 1
   local header="$1"
   shift
+
+  if [[ $(grep --count '\--multi' <<<"$*") -gt 0 ]]; then
+    header+=" | Press <Tab> for toggle selection"
+  fi
+
   fzf --header="$header" "$@"
 }
 
@@ -31,7 +36,7 @@ __fzf_preview() {
     fi
   fi
 
-  __fzf "$header | Press <Tab> for toggle selection" \
+  __fzf "$header" \
     --bind="enter:abort" \
     --preview="$preview_command" --preview-window="$position,$preview_size" \
     "$@"
