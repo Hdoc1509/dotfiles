@@ -7,7 +7,6 @@ git
 jq
 puddletag
 ripgrep
-shellcheck
 wezterm
 xclip
 zsh
