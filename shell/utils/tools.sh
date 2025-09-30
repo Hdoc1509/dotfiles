@@ -90,6 +90,7 @@ get_virtualenv_prompt() {
   if [[ -n $venv ]]; then
     # shellcheck disable=SC2155,SC1003
     local has_backslash="$(echo "${venv}" | grep '\\')" # check backslash on Windows
+    # NOTE: can this be = "$(grep '\\' <<< "$venv")"
 
     if [[ -n $has_backslash ]]; then
       env_name="${venv##*\\}"
