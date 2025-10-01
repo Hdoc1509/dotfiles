@@ -10,6 +10,8 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 export EDITOR=nvim
 
+source ~/.dotfiles/.env
+
 if is_msys_env; then
   # Enable Symlink on git-bash and msys environment
   export MSYS=winsymlinks:nativestrict
