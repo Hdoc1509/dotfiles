@@ -78,6 +78,9 @@ source "$SHELL_UTILS"/nvim.sh
 source "$SHELL_UTILS"/node_package.sh
 source "$SHELL_UTILS"/npm.sh
 source "$SHELL_UTILS"/pnpm.sh
+# NOTE: be sure to load video.sh before gh_demos.sh
+source "$SHELL_UTILS"/video.sh
+source "$SHELL_UTILS"/gh_demos.sh
 source ~/.dotfiles/shell/games.sh
 
 source ~/.dotfiles/lsd/aliases.sh

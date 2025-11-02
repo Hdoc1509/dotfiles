@@ -134,6 +134,13 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+info_log "Installing gifski"
+GIFSKI_VERSION=1.32.0
+curl -Lo gifski.zip "https://gif.ski/gifski-${GIFSKI_VERSION}.zip" &&
+  unzip gifski.zip -d tmp-gifski &&
+  sudo dpkg -i tmp-gifski/linux/gifski_${GIFSKI_VERSION}-1_amd64.deb &&
+  rm -rf gifski.zip tmp-gifski
+
 info_log "Installing FiraCode Nerd Font"
 NERD_FONTS_VERSION=3.4.0
 curl -Lo firacode-nf.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v$NERD_FONTS_VERSION/FiraCode.zip" &&
