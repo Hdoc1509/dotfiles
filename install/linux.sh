@@ -64,10 +64,11 @@ info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 info_log "Installing neovim..."
-NEOVIM_VERSION=0.10.0
-curl -LO https://github.com/neovim/neovim/releases/download/v${NEOVIM_VERSION}/nvim.appimage
-chmod +x nvim.appimage
-mv nvim.appimage ~/.local/bin/nvim
+NEOVIM_VERSION=0.10.4
+NEOVIM_APPIMAGE=nvim-linux-x86_64.appimage
+curl -LO https://github.com/neovim/neovim/releases/download/v${NEOVIM_VERSION}/$NEOVIM_APPIMAGE
+chmod +x $NEOVIM_APPIMAGE
+mv $NEOVIM_APPIMAGE ~/.local/bin/nvim
 
 info_log "Installing simplenote"
 curl -LO https://github.com/Automattic/simplenote-electron/releases/download/v2.21.0/Simplenote-linux-2.21.0-amd64.deb
