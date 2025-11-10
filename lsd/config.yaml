@@ -12,8 +12,6 @@ date: relative
 
 # indicators: true
 
-layout: oneline
-
 icons:
   when: always
 
