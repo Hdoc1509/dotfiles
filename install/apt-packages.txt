@@ -6,7 +6,6 @@ gh
 git
 jq
 puddletag
-ripgrep
 wezterm
 xclip
 zsh

@@ -60,6 +60,14 @@ wget -q \
   sudo dpkg -i /tmp/lsd-install.deb &>/dev/null &&
   rm /tmp/lsd-install.deb
 
+info_log "Installing ripgrep"
+RIPGREP_VERSION=15.1.0
+wget -q \
+  https://github.com/BurntSushi/ripgrep/releases/download/"${RIPGREP_VERSION}"/ripgrep_${RIPGREP_VERSION}-1_amd64.deb \
+  -O tmp-ripgrep.deb &&
+  sudo dpkg -i tmp-ripgrep.deb &>/dev/null &&
+  rm tmp-ripgrep.deb
+
 info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
