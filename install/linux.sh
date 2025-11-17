@@ -16,23 +16,23 @@ curl -fsSL https://apt.fury.io/wez/gpg.key |
   sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
 echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' |
   sudo tee /etc/apt/sources.list.d/wezterm.list
-# brave
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
-  https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" |
-  sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-# github cli
-wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg |
-  sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
-sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" |
-  sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
+# github cli. from https://github.com/cli/cli/blob/8a4154cfe7b7f5ae784ca11774bc0846d5926cbc/docs/install_linux.md#debian
+# shellcheck disable=SC2002
+(type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) &&
+  sudo mkdir -p -m 755 /etc/apt/keyrings &&
+  out=$(mktemp) && wget -nv -O"$out" https://cli.github.com/packages/githubcli-archive-keyring.gpg &&
+  cat "$out" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null &&
+  sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg &&
+  sudo mkdir -p -m 755 /etc/apt/sources.list.d &&
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null &&
+  sudo apt update &&
+  sudo apt install gh -y
 # cloudflare warp
 # https://pkg.cloudflareclient.com/
-# -- set correct version name when updating
+UBUNTU_BASED_RELEASE="jammy"
 curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |
-  sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ jammy main" |
+  sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg &&
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ ${UBUNTU_BASED_RELEASE} main" |
   sudo tee /etc/apt/sources.list.d/cloudflare-client.list
 
 sudo apt update
@@ -45,6 +45,9 @@ fi
 
 # Symlink fd-find to fd
 ln -s "$(which fdfind)" ~/.local/bin/fd
+
+info_log "Installing Brave browser"
+curl -fsS https://dl.brave.com/install.sh | sh
 
 info_log "Installing bat..."
 curl -LO https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
