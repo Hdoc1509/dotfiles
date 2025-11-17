@@ -31,6 +31,29 @@ mv ~/.zshrc ~/.zshrc.bak
 ./install/linux.sh     # for Ubuntu-based Linux distros
 ```
 
+### Browsers
+
+#### Firefox
+
+- Theme: [Black](https://addons.mozilla.org/en-US/firefox/addon/black21)
+- Extensions:
+  - [ColorZilla](https://addons.mozilla.org/en-US/firefox/addon/colorzilla)
+  - [Dark Background and Light Text](https://addons.mozilla.org/en-US/firefox/addon/dark-background-light-text)
+  - [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview)
+  - [Material Icons for GitHub](https://addons.mozilla.org/en-US/firefox/addon/material-icons-for-github)
+  - [Measure-it](https://addons.mozilla.org/en-US/firefox/addon/measure-it)
+  - [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools)
+  - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
+  - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
+  - [VisBug](https://addons.mozilla.org/en-US/firefox/addon/visbug)
+
+#### Brave
+
+- Theme: [CHROLED](https://chromewebstore.google.com/detail/chroled-borderless-pure-b/ebboehhiijjcihmopcggopfgchnfepkn)
+- Extensions:
+  - [Dark Reader](https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh)
+  - [Vimium](https://chromewebstore.google.com/detail/dbepggeogbaibhgnhhndojpepiihcmeb)
+
 ## Windows
 
 There are some shortcuts and scripts for Windows inside `windows` folder.
