@@ -25,6 +25,9 @@ out
 playwright-report
 test-results
 
+### NEOVIM .repro
+.repro
+
 ### OTHER
 node_modules
 .git
