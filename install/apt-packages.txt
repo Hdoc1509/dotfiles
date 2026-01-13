@@ -1,4 +1,5 @@
 build-essential
+clang
 fd-find
 fzf
 gh
