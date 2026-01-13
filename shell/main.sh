@@ -88,6 +88,7 @@ alias dev='cd ~/dev'
 alias cati='wezterm imgcat'
 alias lg='lazygit'
 alias pdt='puddletag'
+alias tsh='tree-sitter highlight'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
