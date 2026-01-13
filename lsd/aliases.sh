@@ -7,4 +7,5 @@ alias ll='ls --long'
 alias Ll='ll --dereference'
 
 alias lst='ls --tree'
+alias llt='ll --tree'
 alias Lst='lst --dereference'
