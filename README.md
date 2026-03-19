@@ -38,7 +38,7 @@ mv ~/.zshrc ~/.zshrc.bak
 - Theme: [Black](https://addons.mozilla.org/en-US/firefox/addon/black21)
 - Extensions:
   - [ColorZilla](https://addons.mozilla.org/en-US/firefox/addon/colorzilla)
-  - [Dark Background and Light Text](https://addons.mozilla.org/en-US/firefox/addon/dark-background-light-text)
+  - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
   - [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview)
   - [Material Icons for GitHub](https://addons.mozilla.org/en-US/firefox/addon/material-icons-for-github)
   - [Measure-it](https://addons.mozilla.org/en-US/firefox/addon/measure-it)
