@@ -38,6 +38,7 @@ curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |
 sudo apt update
 sudo apt upgrade -y
 xargs sudo apt install -y <~/.dotfiles/install/apt-packages.txt
+flatpak install flathub net.waterfox.waterfox
 
 if [[ ! -d ~/.local/bin ]]; then
   mkdir -p ~/.local/bin
