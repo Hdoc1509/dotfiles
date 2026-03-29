@@ -1,8 +1,10 @@
-/* Follow tutorial from: */
-/*   https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/ */
-/* copy this file to $FIREFOX_PROFILE_FOLDER/chrome/userContent.css */
-/* If userContent.scss doesn't work rename it to userChrome.css */
-/* You need to restart Firefox to see the changes */
+/* 1. go to about:profiles */
+/* 2. open Local Directory of your profile */
+/* 2.1 if you are using Waterfox via flatpak, go up until the
+ * net.waterfox.waterfox folder and enter its .waterfox folder */
+/* 3. copy this file chrome/userContent.css */
+/* 3.1 if userContent.scss doesn't work rename it to userChrome.css */
+/* 4. restart Firefox to see the changes */
 
 :root.theme-dark {
   --theme-body-background: #050607 !important;
