@@ -27,7 +27,7 @@ return {
 
   -- URL
   {
-    key = "p",
+    key = "u",
     mods = "CTRL | ALT",
     action = act.QuickSelectArgs({
       label = "open url",
