@@ -30,6 +30,7 @@ GIT_STATUS_PREFIX="${MODULE_SEPARATOR}"
 STATUS_SUCCESS_COLOR=$(set_prompt_color 10 -)
 STATUS_ERROR_COLOR=$(set_prompt_color 1 -)
 
+# NOTE: should I add icon folder ( ) before directory path?
 if is_zsh; then
   RESET_COLOR='%f%k%b'
   DIRECTORY="%B${DIRECTORY_COLOR} %~"

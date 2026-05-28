@@ -19,9 +19,7 @@ source ~/gitstatus/gitstatus.plugin.zsh
 
 function my_set_prompt() {
   local LAST_STATUS_CODE=$?
-  local p
-
-  p="${RESET_COLOR}${DIRECTORY}"
+  local p="${RESET_COLOR}${DIRECTORY}"
 
   if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then
     p+="$(get_git_status_prompt)"
