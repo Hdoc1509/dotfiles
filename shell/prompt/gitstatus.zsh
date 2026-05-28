@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# TODO: rename file to zsh.zsh
+
 set_prompt_color() {
   local fg bg
 
@@ -19,6 +21,7 @@ function my_set_prompt() {
   local LAST_STATUS_CODE=$?
   local p
 
+  # TODO: remove venv part. I dind't make any project using python virtualenv
   p="${RESET_COLOR}$(get_virtualenv_prompt)${DIRECTORY}"
 
   if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then

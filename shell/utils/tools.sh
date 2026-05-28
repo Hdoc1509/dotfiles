@@ -56,29 +56,79 @@ bg_colors() {
   echo
 }
 
+# TODO: move to shell/prompt/gitstatus.sh
 get_git_status_prompt() {
   local p
+  local branch_or_commit
+  local prompt_padding=1
+  local prompt_length=$((prompt_padding * 2))
 
-  p+="${GIT_STATUS_PREFIX} ${GIT_BRANCH_COLOR}"
+  ((prompt_length += ${#PWD}))
+
+  p+=" ${GIT_BRANCH_COLOR}󰘬 "
+  ((prompt_length += 3))
 
   if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
-    p+="${VCS_STATUS_LOCAL_BRANCH//\\/\\\\}"
+    branch_or_commit="${VCS_STATUS_LOCAL_BRANCH//\\/\\\\}"
   else
-    p+=" @${VCS_STATUS_COMMIT//\\/\\\\}"
+    branch_or_commit=" @${VCS_STATUS_COMMIT//\\/\\\\}"
   fi
 
-  ((VCS_STATUS_COMMITS_BEHIND)) && p+=" ${GIT_BEHIND_COLOR}↓${VCS_STATUS_COMMITS_BEHIND}"
-  ((VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND)) && p+=" "
-  ((VCS_STATUS_COMMITS_AHEAD)) && p+="${GIT_AHEAD_COLOR}↑${VCS_STATUS_COMMITS_AHEAD}"
-  ((VCS_STATUS_PUSH_COMMITS_BEHIND)) && p+=" ${GIT_BRANCH_COLOR}←${VCS_STATUS_PUSH_COMMITS_BEHIND}"
-  ((VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND)) && p+=" "
-  ((VCS_STATUS_PUSH_COMMITS_AHEAD)) && p+="${GIT_BRANCH_COLOR}→${VCS_STATUS_PUSH_COMMITS_AHEAD}"
-  ((VCS_STATUS_STASHES)) && p+=" ${GIT_BRANCH_COLOR}*${VCS_STATUS_STASHES}"
-  [[ -n "$VCS_STATUS_ACTION" ]] && p+=" ${GIT_CONFLICTS_COLOR}${VCS_STATUS_ACTION}"
-  ((VCS_STATUS_NUM_CONFLICTED)) && p+=" ${GIT_CONFLICTS_COLOR}~${VCS_STATUS_NUM_CONFLICTED}"
-  ((VCS_STATUS_NUM_STAGED)) && p+=" ${GIT_STAGED_COLOR}+${VCS_STATUS_NUM_STAGED}"
-  ((VCS_STATUS_NUM_UNSTAGED)) && p+=" ${GIT_UNSTAGED_COLOR}!${VCS_STATUS_NUM_UNSTAGED}"
-  ((VCS_STATUS_NUM_UNTRACKED)) && p+=" ${GIT_UNTRACKED_COLOR}?${VCS_STATUS_NUM_UNTRACKED}"
+  p+="${branch_or_commit}"
+  ((prompt_length += ${#branch_or_commit}))
+
+  ((VCS_STATUS_COMMITS_BEHIND)) && {
+    p+=" ${GIT_BEHIND_COLOR}↓${VCS_STATUS_COMMITS_BEHIND}"
+    ((prompt_length += 3))
+  }
+  ((VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND)) && {
+    p+=" "
+    ((prompt_length += 1))
+  }
+  ((VCS_STATUS_COMMITS_AHEAD)) && {
+    p+="${GIT_AHEAD_COLOR}↑${VCS_STATUS_COMMITS_AHEAD}"
+    ((prompt_length += 2))
+  }
+  ((VCS_STATUS_PUSH_COMMITS_BEHIND)) && {
+    p+=" ${GIT_BRANCH_COLOR}←${VCS_STATUS_PUSH_COMMITS_BEHIND}"
+    ((prompt_length += 3))
+  }
+  ((VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND)) && {
+    p+=" "
+    ((prompt_length += 1))
+  }
+  ((VCS_STATUS_PUSH_COMMITS_AHEAD)) && {
+    p+="${GIT_BRANCH_COLOR}→${VCS_STATUS_PUSH_COMMITS_AHEAD}"
+    ((prompt_length += 2))
+  }
+  ((VCS_STATUS_STASHES)) && {
+    p+=" ${GIT_BRANCH_COLOR}*${VCS_STATUS_STASHES}"
+    ((prompt_length += 3))
+  }
+  [[ -n "$VCS_STATUS_ACTION" ]] && {
+    p+=" ${GIT_CONFLICTS_COLOR}${VCS_STATUS_ACTION}"
+    ((prompt_length += ${#VCS_STATUS_ACTION}))
+  }
+  ((VCS_STATUS_NUM_CONFLICTED)) && {
+    p+=" ${GIT_CONFLICTS_COLOR}~${VCS_STATUS_NUM_CONFLICTED}"
+    ((prompt_length += 3))
+  }
+  ((VCS_STATUS_NUM_STAGED)) && {
+    p+=" ${GIT_STAGED_COLOR}+${VCS_STATUS_NUM_STAGED}"
+    ((prompt_length += 3))
+  }
+  ((VCS_STATUS_NUM_UNSTAGED)) && {
+    p+=" ${GIT_UNSTAGED_COLOR}!${VCS_STATUS_NUM_UNSTAGED}"
+    ((prompt_length += 3))
+  }
+  ((VCS_STATUS_NUM_UNTRACKED)) && {
+    p+=" ${GIT_UNTRACKED_COLOR}?${VCS_STATUS_NUM_UNTRACKED}"
+    ((prompt_length += 3))
+  }
+
+  if ((prompt_length > COLUMNS)); then
+    p=$'\n'"${p}"
+  fi
 
   echo "${p}"
 }
