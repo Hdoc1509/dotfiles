@@ -132,22 +132,3 @@ get_git_status_prompt() {
 
   echo "${p}"
 }
-
-get_virtualenv_prompt() {
-  local venv="${VIRTUAL_ENV}"
-  local env_name
-
-  if [[ -n $venv ]]; then
-    # shellcheck disable=SC2155,SC1003
-    local has_backslash="$(echo "${venv}" | grep '\\')" # check backslash on Windows
-    # NOTE: can this be = "$(grep '\\' <<< "$venv")"
-
-    if [[ -n $has_backslash ]]; then
-      env_name="${venv##*\\}"
-    else
-      env_name="${venv##*/})"
-    fi
-
-    echo "${VENV_COLOR} (venv:${env_name})${VENV_SUFFIX}"
-  fi
-}
