@@ -10,7 +10,11 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 export EDITOR=nvim
 
-source ~/.dotfiles/.env
+if [[ -s ~/.dotfiles/.env  ]]; then
+  source ~/.dotfiles/.env
+else
+  echo "[DOTFILES]: Missing .env file. Please create one."
+fi
 
 if is_msys_env; then
   # Enable Symlink on git-bash and msys environment
