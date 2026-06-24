@@ -47,6 +47,14 @@ mv ~/.zshrc ~/.zshrc.bak
   - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
   - [VisBug](https://addons.mozilla.org/en-US/firefox/addon/visbug)
 
+#### Waterfox
+
+Command to use as default browser:
+
+```bash
+flatpak run net.waterfox.waterfox "%s"
+```
+
 #### Brave
 
 - Theme: [CHROLED](https://chromewebstore.google.com/detail/chroled-borderless-pure-b/ebboehhiijjcihmopcggopfgchnfepkn)
