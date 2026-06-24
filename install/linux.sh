@@ -76,7 +76,7 @@ info_log "Installing nvm..."
 curl https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 info_log "Installing neovim..."
-NEOVIM_VERSION=0.10.4
+NEOVIM_VERSION=0.11.7
 NEOVIM_APPIMAGE=nvim-linux-x86_64.appimage
 curl -LO https://github.com/neovim/neovim/releases/download/v${NEOVIM_VERSION}/$NEOVIM_APPIMAGE
 chmod +x $NEOVIM_APPIMAGE
