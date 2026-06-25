@@ -57,7 +57,7 @@ flatpak run net.waterfox.waterfox "%s"
 
 #### Brave
 
-- Theme: [CHROLED](https://chromewebstore.google.com/detail/chroled-borderless-pure-b/ebboehhiijjcihmopcggopfgchnfepkn)
+- Theme: [All Black - Full Dark Theme/Black Theme](https://chromewebstore.google.com/detail/all-black-full-dark-theme/mkplpffahhkjfocfbfapcemhhkgmljpn)
 - Extensions:
   - [Dark Reader](https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh)
   - [Vimium](https://chromewebstore.google.com/detail/dbepggeogbaibhgnhhndojpepiihcmeb)
