@@ -18,7 +18,16 @@ setup_git() {
 }
 
 setup_github_cli() {
+  local browser
+
   gh config set editor "nvim -u ~/.config/nvim/minimal.lua"
   gh config set pager "less -+X --tabs=2"
-  gh config set browser "flatpak run net.waterfox.waterfox"
+
+  if [[ $OSTYPE == 'msys' ]]; then
+    browser="waterfox"
+  else
+    browser="flatpal run net.waterfox.waterfox"
+  fi
+
+  gh config set browser "$browser"
 }
