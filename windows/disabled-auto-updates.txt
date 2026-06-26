@@ -1,0 +1,5 @@
+https://answers.microsoft.com/en-us/windows/forum/all/how-do-i-permanently-disable-automatic-windows-10/82e1e076-8dff-475e-8c5e-a2061d1a4c5a
+
+See solution with gpedit.msc
+
+or use https://github.com/raphire/win11debloat
