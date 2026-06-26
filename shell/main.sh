@@ -10,8 +10,12 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/bat/bat.conf"
 
 export EDITOR=nvim
 
-if [[ -s ~/.dotfiles/.env  ]]; then
-  source ~/.dotfiles/.env
+if [[ -f ~/.dotfiles/.env  ]]; then
+  if [[ -s ~/.dotfiles/.env ]]; then
+    source ~/.dotfiles/.env
+  else
+    echo "[DOTFILES]: .env file has no content."
+  fi
 else
   echo "[DOTFILES]: Missing .env file. Please create one."
 fi
