@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ~/.dotfiles/install/config.sh
 source ~/.dotfiles/install/messages.sh
 
 # Enable Symlink on git-bash and msys environment
@@ -30,5 +31,11 @@ pnpm setup
 
 info_log "Restoring pnpm global packages..."
 pnpm_restore_global
+
+info_log "Setting up git config"
+setup_git
+
+info_log "Setting up github-cli"
+setup_github_cli
 
 installation_complete_log
