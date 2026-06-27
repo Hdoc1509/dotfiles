@@ -71,6 +71,8 @@ There are some shortcuts and scripts for Windows inside `windows` folder.
 
 ## Trouble-shooting
 
+### Screen resolution
+
 If you have problems with screen resolution on Ubuntu-based Linux distributions,
 run the following command:
 
@@ -81,4 +83,20 @@ cat shell/.profile >> ~/.profile
 
 # then execute ./shell/.profile
 ./shell/.profile
+```
+
+### Ownership of mounted drives
+
+Retrieve the owner id of the user:
+
+```bash
+id -u
+```
+
+Let's say the retrieved `id` is `1000`.
+
+Use the `id` for the following mounting options using `Disks` utility:
+
+```txt
+uid=1000,gid=1000
 ```
