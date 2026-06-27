@@ -8,7 +8,7 @@
   _base_path="/$(cut --delimiter="/" --fields=2 <<<"$PWD")"
   _rest_path="/$(cut --delimiter="/" --fields=3- "$PWD")"
 
-  # string lenght of _rest_path
+  # string length of _rest_path
   if [[ ${#_rest_path} -gt 3 ]]; then
     # trim path here
     DIRECTORY=".../${DIRECTORY}"
