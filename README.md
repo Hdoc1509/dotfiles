@@ -27,8 +27,8 @@ mv ~/.bashrc ~/.bashrc.bak
 mv ~/.zshrc ~/.zshrc.bak
 
 # install scripts
-./install/windows.sh   # for Windows
-./install/linux.sh     # for Ubuntu-based Linux distros
+./install/windows.sh # for Windows
+./install/linux.sh   # for Ubuntu-based Linux distros
 ```
 
 ### Browsers
@@ -79,7 +79,7 @@ run the following command:
 ```bash
 cd ~/.dotfiles
 
-cat shell/.profile >> ~/.profile
+cat shell/.profile >>~/.profile
 
 # then execute ./shell/.profile
 ./shell/.profile
