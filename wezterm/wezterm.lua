@@ -29,6 +29,10 @@ return {
     top = 0,
     bottom = 0,
   },
+  inactive_pane_hsb = {
+    saturation = 0.9,
+    brightness = 0.5,
+  },
 
   -- KEY BINDINGS
   keys = require("key_bindings"),
